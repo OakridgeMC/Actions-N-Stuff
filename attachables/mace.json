@@ -1,0 +1,46 @@
+{
+  "format_version":"1.10.0",
+  "minecraft:attachable":{
+    "description":{
+      "identifier":"minecraft:mace",
+      "materials":{
+        "default":"entity",
+	"enchanted":"entity_glint"
+      },
+      "textures": {
+        "default": "textures/models/mace/base",
+        "b0": "textures/models/mace/0",
+        "b1": "textures/models/mace/1",
+        "b2": "textures/models/mace/2",
+        "b3": "textures/models/mace/3",
+        "b4": "textures/models/mace/4",
+        "b5": "textures/models/mace/5",
+        "b6": "textures/models/mace/6",
+        "b7": "textures/models/mace/7",
+        "enchanted": "textures/misc/enchanted_item_glint"
+      },
+      "geometry":{
+	"default":"geometry.mace"
+      },
+      "particle_effects":{
+	"dots":"act:mace_dots",
+	"wave":"act:mace_wave"
+      },
+      "sound_effects":{
+	"charged":"item.charged"
+      },
+      "render_controllers":["controller.render.mace"],
+      "animations":{
+	"3rd":"animation.item.mace",
+	"1st":"animation.item.first_person.mace",
+	"dense":"animation.mace.dense",
+	"density":"controller.animation.item.mace"
+      },
+      "scripts":{
+	"animate":[
+	  "density"
+	]
+      }
+    }
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "format_version":"1.8.0",
+  "render_controllers":{
+    "controller.render.cod_anim":{
+      "geometry":"Geometry.default",
+      "materials":[{"*":"material.default"},{"*Fin":"material.fin"}],
+      "textures":["Texture.default"]
+    },
+    "controller.render.salmon_anim":{
+      "geometry":"Geometry.default",
+      "materials":[{"*":"material.default"},{"body*":"material.solid"},{"head":"material.solid"}],
+      "textures":["Texture.default"]
+    }
+  }
+}

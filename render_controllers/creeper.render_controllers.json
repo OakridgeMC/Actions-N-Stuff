@@ -1,0 +1,41 @@
+{
+  "format_version":"1.8.0",
+  "render_controllers":{
+    "controller.render.creeper_anim":{
+      "geometry":"Geometry.default",
+      "materials":[{"*":"Material.default"}],
+      "textures":["q.is_powered == 1 ? Texture.charged : Texture.default"],
+      "light_color_multiplier":"v.flash ? (1.2 + q.swell_amount*3) : 1",
+      "overlay_color":{
+	"r":"1.0",
+	"g":"1.0",
+	"b":"1.0",
+	"a":"v.flash ? (0.125+q.swell_amount*0.375) : 0"
+      },
+      "on_fire_color":{
+	"r":1.0,
+	"g":"v.flash ? 0.6 : 0.4",
+	"b":0,
+	"a":"v.flash ? 1.0 : math.cos(q.life_time*1200)*-0.35 + 0.35"
+      }
+    },
+    "controller.render.creeper_armor_anim":{
+      "geometry":"Geometry.charged",
+      "part_visibility":[{"*":"query.is_powered"}],
+      "materials":[{"*":"Material.charged"}],
+      "textures":["Texture.lightning"],
+      "overlay_color":{
+	"r": 1.0,
+	"g": 1.0,
+	"b": 1.0,
+	"a": 1.0
+      },
+      "uv_anim":{
+	"offset":["(Math.floor(query.life_time*16)+query.delta_time)/64", "(Math.floor(query.life_time*16)+query.delta_time)/32"],
+	"scale":[1.0,1.0]
+      },
+      "light_color_multiplier":1,
+      "ignore_lighting":true
+    }
+  }
+}

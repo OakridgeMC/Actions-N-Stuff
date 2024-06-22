@@ -1,0 +1,28 @@
+{
+  "format_version":"1.10.0",
+  "render_controllers":{
+    "controller.render.eye_of_ender":{
+      "geometry":"geometry.default",
+      "materials":[
+	{"*":"Material.default"},
+	{"cornea":"Material.outer"}
+      ],
+      "arrays":{
+	"textures":{
+	  "Array.skins":[
+"Texture.a0","Texture.a1","Texture.a2","Texture.a3","Texture.a5","Texture.a6","Texture.a6","Texture.a6","Texture.a5","Texture.a5","Texture.a4","Texture.a2","Texture.a2","Texture.a1","Texture.a1","Texture.a0","Texture.a0","Texture.a0","Texture.a0","Texture.a0","Texture.a0","Texture.a0","Texture.a1","Texture.a2","Texture.a3","Texture.a5","Texture.a6","Texture.a6","Texture.a6","Texture.a5","Texture.a5","Texture.a4","Texture.a2","Texture.a2","Texture.a1","Texture.a1","Texture.a0","Texture.a0","Texture.a0","Texture.a0","Texture.a0","Texture.a0","Texture.a0","Texture.a0","Texture.a0","Texture.a0","Texture.a0","Texture.a0","Texture.a0","Texture.a0","Texture.a0","Texture.a0","Texture.a0","Texture.a0","Texture.a0","Texture.a0","Texture.a0","Texture.a0","Texture.a0","Texture.a0","Texture.a0","Texture.a0","Texture.a0","Texture.a0","Texture.a0","Texture.a0","Texture.a0","Texture.a0","Texture.a0","Texture.a0","Texture.a0","Texture.a1","Texture.a2","Texture.a3","Texture.a5","Texture.a6","Texture.a6","Texture.a6","Texture.a5","Texture.a5","Texture.a4","Texture.a2","Texture.a2","Texture.a1","Texture.a1","Texture.a0","Texture.a0","Texture.a0","Texture.a0","Texture.a0","Texture.a0","Texture.a0","Texture.a0","Texture.a0","Texture.a0","Texture.a0","Texture.a0","Texture.a0","Texture.a0","Texture.a0","Texture.a0","Texture.a0","Texture.a0","Texture.a0","Texture.a0","Texture.a0","Texture.a0","Texture.a0","Texture.a0","Texture.a0","Texture.a0","Texture.a0","Texture.a0","Texture.a0","Texture.a0","Texture.a0","Texture.a0","Texture.a0","Texture.a0"
+	  ]
+	}
+      },
+      "light_color_multiplier":"q.anim_time>0 ? math.cos(q.anim_time*360)*3 : 1",
+      "overlay_color":{
+	"r":1.0,
+	"g":"1-q.anim_time*4",
+	"b":1.0,
+	"a":"q.anim_time>0 ? (1-q.anim_time*4):0"
+      },
+      "textures":["Array.skins[query.life_time*48]"],
+      "ignore_lighting":true
+    }
+  }
+}

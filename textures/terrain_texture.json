@@ -1,0 +1,28 @@
+{
+  "num_mip_levels":4,
+  "padding":8,
+  "resource_pack_name":"actions_n_stuff",
+  "texture_data":{
+    "mushroom_brown":{
+      "textures":[
+	{
+	  "variations":[
+	    { "path":"textures/blocks/m_brown", "weight":0 },
+	    { "path":"textures/blocks/mushroom_brown", "weight":1 }
+	  ]
+	}
+      ]
+    },
+    "mushroom_red":{
+      "textures":[
+	{
+	  "variations":[
+	    { "path":"textures/blocks/m_red", "weight":0 },
+	    { "path":"textures/blocks/mushroom_red", "weight":1 }
+	  ]
+	}
+      ]
+    }
+  },
+  "texture_name":"atlas.terrain"
+}

@@ -1,0 +1,16 @@
+{
+  "format_version":"1.10.0",
+  "render_controllers":{
+    "controller.render.drowned_oh":{
+      "geometry":"Geometry.default",
+      "materials":[{"*":"Material.default"},{"hat":"Material.outer"},{"jacket":"Material.outer"},{"rightSleeve":"Material.outer"},{"leftSleeve":"Material.outer"},{"rightPants":"Material.outer"},{"leftPants":"Material.outer"}],
+      "textures":["Texture.default"],
+      "on_fire_color":{
+	"r":1.0,
+	"g":0.4,
+	"b":0.0,
+	"a":"math.cos(q.life_time*1200)*-0.35 + 0.35"
+      }
+    }
+  }
+}

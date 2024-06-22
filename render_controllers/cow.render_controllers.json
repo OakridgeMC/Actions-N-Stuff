@@ -1,0 +1,38 @@
+{
+  "format_version":"1.8.0",
+  "render_controllers":{
+    "controller.render.cow_anim":{
+      "geometry":"Geometry.default",
+      "materials":[
+	{"*":"Material.default"},
+	{"head":"Material.head"},
+	{"blink":"Material.head"},
+	{"right_eye":"Material.head"},
+	{"left_eye":"Material.head"}
+      ],
+      "textures":["Texture.default"],
+      "on_fire_color":{
+	"r":1.0,
+	"g":0.4,
+	"b":0.0,
+	"a":"math.cos(q.life_time*1200)*-0.35 + 0.35"
+      }
+    },
+    "controller.render.mooshroom_anim":{
+      "arrays":{
+	"textures":{
+	  "Array.skins":["Texture.default","Texture.brown"]
+	}
+      },
+      "geometry":"Geometry.default",
+      "materials":[{"*":"Material.default"}],
+      "textures":["Array.skins[q.variant]"],
+      "on_fire_color":{
+	"r":1.0,
+	"g":0.4,
+	"b":0.0,
+	"a":"math.cos(q.life_time*1200)*-0.35 + 0.35"
+      }
+    }
+  }
+}

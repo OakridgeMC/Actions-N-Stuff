@@ -1,0 +1,30 @@
+{
+  "format_version":"1.10.0",
+  "minecraft:attachable":{
+    "description":{
+      "identifier":"minecraft:spyglass",
+      "materials":{
+	"default":"entity"
+      },
+      "textures":{
+	"default":"textures/entity/spyglass",
+	"prop":"textures/models/held_item/telescope"
+      },
+      "geometry":{
+	"default":"geometry.spyglass",
+	"prop":"geometry.telescope"
+      },
+      "animations":{
+	"holding.1st":"animation.spyglass.holding.1st",
+	"holding":"animation.spyglass.holding",
+	"scoping":"animation.spyglass.scoping",
+	"scoping.pos":"animation.spyglass.scoping.pos",
+	"spyglass":"controller.animation.item.spyglass"
+      },
+      "scripts":{
+	"animate":[{"spyglass":"!q.is_name_any('§§')"}]
+      },
+      "render_controllers":[{"controller.render.default":"!q.is_name_any('§§')"},{"controller.render.prop":"q.is_name_any('§§')"}]
+    }
+  }
+}

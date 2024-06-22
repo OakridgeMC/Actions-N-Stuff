@@ -1,0 +1,1 @@
+{"format_version":"1.8.0","animations":{"animation.experience_orb.rotate":{"loop":true,"bones":{"body":{"scale":"2.4+query.texture_frame_index*0.6"},"axis":{"rotation":[0,"q.life_time*90","math.sin(q.life_time*90)*22.5"],"position":[0,0.5,0]}}}}}

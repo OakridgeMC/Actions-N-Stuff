@@ -1,0 +1,28 @@
+{
+  "format_version":"1.10.0",
+  "minecraft:attachable":{
+    "description":{
+      "identifier":"minecraft:emerald",
+      "materials":{
+	"default":"entity_emissive"
+      },
+      "textures":{
+	"default":"textures/models/held_item/emerald"
+      },
+      "geometry":{
+	"default":"geometry.emerald"
+      },
+      "animations":{
+	"3rd":"animation.item.gem",
+	"1st":"animation.item.first_person_gem"
+      },
+      "scripts":{
+	"animate":[
+	  {"3rd":"!c.is_first_person"},
+	  {"1st":"c.is_first_person"}
+	]
+      },
+      "render_controllers":["controller.render.default"]
+    }
+  }
+}

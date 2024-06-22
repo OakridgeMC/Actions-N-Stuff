@@ -1,0 +1,22 @@
+{
+  "format_version":"1.8.0",
+  "render_controllers":{
+    "controller.render.piglin_anim":{
+      "geometry":"Geometry.default",
+      "textures":["Texture.default"],
+      "materials":[
+	{"*":"Material.default"},
+	{"blink":"Material.eyes"}
+      ],
+      "on_fire_color":{"r":1.0,"g":0.4,"b":0.0,"a":"math.cos(q.life_time*1200)*-0.35 + 0.35"}
+    },
+    "controller.render.z_piglin":{
+      "geometry":"Geometry.default",
+      "materials":[
+	{"*":"Material.default"},
+	{"blink":"Material.eyes"}
+      ],
+      "textures":["q.equipped_item_any_tag('slot.weapon.mainhand','minecraft:is_axe') ? Texture.brute : Texture.default"]
+    }
+  }
+}

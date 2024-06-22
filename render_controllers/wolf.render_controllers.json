@@ -1,0 +1,49 @@
+{
+  "format_version":"1.8.0",
+  "render_controllers":{
+    "controller.render.wolf_anim":{
+      "geometry":"Geometry.default",
+      "materials":[{"*":"Material.default"},{"collar":"Material.collar"}],
+      "part_visibility":[{"collar":"query.is_tamed"}],
+      "arrays":{
+	"textures":{
+	  "Array.default":[
+	    "Texture.pale_a",
+	    "Texture.ashen_a",
+	    "Texture.black_a",
+	    "Texture.chestnut_a",
+	    "Texture.rusty_a",
+	    "Texture.snowy_a",
+	    "Texture.spotted_a",
+	    "Texture.striped_a",
+	    "Texture.woods_a"
+	  ],
+	  "Array.angry":[
+	    "Texture.pale_b",
+	    "Texture.ashen_b",
+	    "Texture.black_b",
+	    "Texture.chestnut_b",
+	    "Texture.rusty_b",
+	    "Texture.snowy_b",
+	    "Texture.spotted_b",
+	    "Texture.striped_b",
+	    "Texture.woods_b"
+	  ]
+	}
+      },
+      "textures":["query.is_angry ? Array.angry[query.variant] : Array.default[query.variant]"],
+      "on_fire_color":{
+	"r":1.0,
+	"g":0.4,
+	"b":0.0,
+	"a":"math.cos(q.life_time*1200)*-0.35 + 0.35"
+      },
+      "is_hurt_color":{
+	"r":1,
+	"g":"q.equipment_count==1 ? 1",
+	"b":"q.equipment_count==1 ? 1",
+	"a":"q.equipment_count==0 ? 0.6 : 0.6-math.mod(q.life_time,0.25)*2.4"
+      }
+    }
+  }
+}

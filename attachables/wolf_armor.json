@@ -1,0 +1,27 @@
+{
+  "format_version":"1.10.0",
+  "minecraft:attachable":{
+    "description":{
+      "identifier":"minecraft:wolf_armor",
+      "materials":{"default":"wolf_armor"},
+      "textures": {
+        "default":"textures/entity/wolf/armur",
+        "dyed":"textures/entity/wolf/dyed_armur",
+        "cracked_none":"textures/entity/wolf/wolf_armor_cracked_none",
+        "cracked_low":"textures/entity/wolf/wolf_armor_cracked_low",
+        "cracked_medium":"textures/entity/wolf/wolf_armor_cracked_medium",
+        "cracked_high":"textures/entity/wolf/wolf_armor_cracked_high"
+      },
+      "geometry":{
+	"default":"geometry.wolf_armur"
+      },
+      "scripts":{
+	"pre_animation":[
+	  "variable.is_dyed = query.armor_color_slot(1, 0) != 1.0 || query.armor_color_slot(1, 1) != 1.0 || query.armor_color_slot(1, 2) != 1.0;",
+	  "variable.cracks_index = math.floor(query.armor_damage_slot(1)/16);"
+	]
+      },
+      "render_controllers": ["controller.render.wolf_armur"]
+    }
+  }
+}

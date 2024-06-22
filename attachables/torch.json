@@ -1,0 +1,38 @@
+{
+  "format_version":"1.10.0",
+  "minecraft:attachable":{
+    "description":{
+      "identifier":"minecraft:torch",
+      "materials":{"default":"entity_emissive","flare":"entity_emissive_alpha"},
+      "textures":{
+	"on":"textures/models/held_item/torch/coal",
+	"off":"textures/models/held_item/torch/off",
+	"prop":"textures/models/held_item/brazier"
+      },
+      "geometry":{
+	"default":"geometry.torch",
+	"prop":"geometry.big_torch"
+      },
+      "scripts":{
+	"initialize":["v.die_roll = 0;"],
+	"animate":["perspective"]
+      },
+      "animations":{
+	"1st_person_pos":"animation.item.first_person_torch",
+	"flame_0":"animation.item.torch_flame_a",
+	"flame_1":"animation.item.torch_flame_b",
+	"flame_timer":"animation.item.torch_flame_timer",
+	"flame_target":"animation.item.torch_flame_target",
+	"flame_controller":"controller.animation.torch_flame",
+	"flame_particles_controller":"controller.animation.torch_flame.particles",
+	"perspective":"controller.animation.torch_perspective"
+      },
+      "particle_effects":{
+	"fire":"act:big_torch",
+	"glow":"act:torch_glow",
+	"spark":"act:torch_spark"
+      },
+      "render_controllers":[{"controller.render.light":"!q.is_name_any('§§')"},{"controller.render.prop":"q.is_name_any('§§')"}]
+    }
+  }
+}

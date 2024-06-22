@@ -1,0 +1,31 @@
+{
+  "format_version":"1.10.0",
+  "render_controllers":{
+    "controller.render.fireball_anim":{
+      "geometry":"Geometry.default",
+      "materials":[{"*":"Material.default"}],
+      "textures":["Texture.default"],
+      "light_color_multiplier":"math.cos(math.min(query.life_time,0.75)*240)*2.2+2.8",
+      "on_fire_color":{
+	"r":1,
+	"g":"math.cos(math.min(query.life_time,0.75)*240)*0.25+0.25",
+	"b":"math.cos(math.min(query.life_time,0.375)*480)*0.25+0.25",
+	"a":"math.cos(math.min(query.life_time,1)*180)*0.5+0.5"
+      },
+      "ignore_lighting":true
+    },
+    "controller.render.fireball_small":{
+      "geometry":"Geometry.default",
+      "materials":[{"*":"Material.default"}],
+      "textures":["Texture.default"],
+      "light_color_multiplier":3.5,
+      "on_fire_color":{
+	"r":1,
+	"g":"1-math.min(q.life_time*3.2,0.8)",
+	"b":"1-math.min(q.life_time*4,1)",
+	"a":1
+      },
+      "ignore_lighting":true
+    }
+  }
+}

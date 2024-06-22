@@ -1,0 +1,14 @@
+{
+  "format_version":"1.10.0",
+  "render_controllers":{
+    "controller.render.awwow":{
+      "geometry":"geometry.default",
+      "materials":[
+	{"*": "Material.default"}
+      ],
+      "on_fire_color":{"r":0,"g":0,"b":0,"a":0},
+      "textures":["texture.default"],
+      "filter_lighting": true
+    }
+  }
+}

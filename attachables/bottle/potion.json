@@ -1,0 +1,53 @@
+{
+  "format_version":"1.10.0",
+  "minecraft:attachable":{
+    "description":{
+      "identifier":"minecraft:potion",
+      "materials":{
+	"default":"entity",
+	"bottle":"entity_alphablend"
+      },
+      "textures": {
+	"pot1":"textures/entity/potion/water",
+	"pot2":"textures/entity/potion/fire",
+	"pot3":"textures/entity/potion/harm",
+	"pot4":"textures/entity/potion/invis",
+	"pot5":"textures/entity/potion/jump",
+	"pot6":"textures/entity/potion/slowfall",
+	"pot7":"textures/entity/potion/poison",
+	"pot8":"textures/entity/potion/regen",
+	"pot9":"textures/entity/potion/slow",
+	"pot10":"textures/entity/potion/speed",
+	"pot11":"textures/entity/potion/splishysplash",
+	"pot12":"textures/entity/potion/strength",
+	"pot13":"textures/entity/potion/turtle",
+	"pot14":"textures/entity/potion/vision",
+	"pot15":"textures/entity/potion/weakness",
+	"pot16":"textures/entity/potion/wither"
+      },
+      "geometry":{
+	"default":"geometry.splashy"
+      },
+      "render_controllers":["controller.render.potion_anim"],
+      "animations":{
+	"controller_drinking":"controller.animation.drinking",
+	"3rd":"animation.item.bottle",
+	"3rd_drink":"animation.item.bottle_drink",
+	"1st":"animation.item.first_person_bottle",
+	"1st_drink":"animation.item.first_person_bottle_drink"
+      },
+      "scripts":{
+	"initialize":["variable.potion_color = Math.random_integer(1, 14);"],
+	"animate":[
+	  {"3rd":"!c.is_first_person && !q.is_name_any('§§')"},
+	  {"1st":"c.is_first_person"},
+	  "controller_drinking"
+	]
+      },
+      "particle_effects":{
+	"potion_0":"act:potion_0_player",
+	"potion_1":"act:potion_1_player"
+      }
+    }
+  }
+}

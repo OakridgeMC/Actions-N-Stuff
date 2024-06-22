@@ -1,0 +1,20 @@
+{
+  "format_version":"1.8.0",
+  "render_controllers":{
+    "controller.render.puff.small":{
+      "geometry":"geometry.small",
+      "materials":[{"*":"Material.default"},{"small_puff":"Material.solid"}],
+      "textures":["Texture.default"]
+    },
+    "controller.render.puff.medium":{
+      "geometry":"geometry.mid",
+      "materials":[{"*":"Material.default"}],
+      "textures":["Texture.default"]
+    },
+    "controller.render.puff.large":{
+      "geometry":"geometry.big",
+      "materials":[{"*":"Material.default"}],
+      "textures":["Texture.default"]
+    }
+  }
+}

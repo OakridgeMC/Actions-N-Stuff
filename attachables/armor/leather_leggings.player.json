@@ -1,0 +1,25 @@
+{
+  "format_version":"1.10.0",
+  "minecraft:attachable":{
+    "description":{
+      "identifier":"minecraft:leather_leggings.player",
+      "item":{"minecraft:leather_leggings": "query.owner_identifier=='minecraft:player'"},
+      "materials":{
+	"default":"armor_leather",
+	"enchanted":"armor_leather_enchanted"
+      },
+      "textures":{
+	"default":"textures/models/armor/leather_2",
+	"enchanted":"textures/misc/enchanted_actor_glint"
+      },
+      "geometry":{
+	"default":"geometry.player.armor.leggings"
+      },
+      "scripts":{
+	"animate":["offset","put_on"]
+      },
+      "animations":{"put_on":"animation.armor.legs","offset":"animation.armor.leggings.offset"},
+      "render_controllers":["controller.render.armor"]
+    }
+  }
+}

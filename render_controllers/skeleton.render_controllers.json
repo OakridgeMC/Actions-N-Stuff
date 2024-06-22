@@ -1,0 +1,50 @@
+{
+  "format_version":"1.8.0",
+  "render_controllers":{
+    "controller.render.skeleton_anim":{
+      "geometry":"Geometry.default",
+      "materials":[{"*":"Material.default"},{"body":"Material.rib_cage"}],
+      "textures":["Texture.default"],
+      "on_fire_color":{
+	"r":1.0,
+	"g":0.4,
+	"b":0.0,
+	"a":"math.cos(q.life_time*1200)*-0.35 + 0.35"
+      }
+    },
+    "controller.render.skeleton_clothes":{
+      "geometry":"Geometry.clothes",
+      "materials":[{"*":"Material.cloth"},{"body":"Material.locket"}],
+      "textures":["Texture.clothes"],
+      "on_fire_color":{
+	"r":1.0,
+	"g":0.4,
+	"b":0.0,
+	"a":"math.cos(q.life_time*1200)*-0.35 + 0.35"
+      }
+    },
+    "controller.render.stray_anim":{
+      "geometry":"Geometry.default",
+      "materials":[{"*":"Material.default"},{"head":"Material.skull"},{"body":"Material.cloth"}],
+      "textures":["Texture.default"],
+      "on_fire_color":{
+	"r":1.0,
+	"g":0.4,
+	"b":0.0,
+	"a":"math.cos(q.life_time*1200)*-0.35 + 0.35"
+      }
+    },
+    "controller.render.bogged_anim":{
+      "geometry":"Geometry.default",
+      "materials":[{"*":"Material.default"},{"hat":"Material.skull"},{"body":"Material.cloth"},{"rightSleeve":"Material.cloth"},{"leftSleeve":"Material.cloth"}],
+      "part_visibility":[{"helmet":"q.is_item_name_any('slot.armor.head','')"}],
+      "textures":["Texture.default"],
+      "on_fire_color":{
+	"r":1.0,
+	"g":0.4,
+	"b":0.0,
+	"a":"math.cos(q.life_time*1200)*-0.35 + 0.35"
+      }
+    }
+  }
+}

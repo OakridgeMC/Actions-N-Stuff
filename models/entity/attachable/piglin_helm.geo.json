@@ -1,0 +1,1 @@
+{"format_version":"1.12.0","minecraft:geometry":[{"description":{"identifier":"geometry.piglin_helm","texture_width":44,"texture_height":15},"bones":[{"name":"head","pivot":[0,24,0],"cubes":[{"origin":[-6,28,-5],"size":[12,5,10],"uv":[0,0]}]}]}]}

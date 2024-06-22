@@ -1,0 +1,28 @@
+{
+  "format_version":"1.10.0",
+  "minecraft:attachable":{
+    "description":{
+      "identifier":"minecraft:bucket",
+      "materials":{
+	"default":"entity_alphatest_one_sided"
+      },
+      "textures":{
+	"default":"textures/models/held_item/bucket/bucket"
+      },
+      "geometry":{
+	"default":"geometry.bucket_empty"
+      },
+      "render_controllers":["controller.render.default"],
+      "animations":{
+	"3rd":"animation.item.bucket",
+	"first_person":"animation.item.first_person_bucket"
+      },
+      "scripts":{
+	"animate":[
+	  {"3rd":"!c.is_first_person"},
+	  {"first_person":"c.is_first_person"}
+	]
+      }
+    }
+  }
+}

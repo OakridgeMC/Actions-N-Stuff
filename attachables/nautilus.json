@@ -1,0 +1,30 @@
+{
+  "format_version":"1.10.0",
+  "minecraft:attachable":{
+    "description":{
+      "identifier":"minecraft:nautilus_shell",
+      "materials":{
+	"default":"entity"
+      },
+      "textures":{
+	"default":"textures/models/held_item/shell"
+      },
+      "geometry":{
+	"default":"geometry.shell_item"
+      },
+      "render_controllers":["controller.render.default"],
+      "animations":{
+	"3rd":"animation.shell_item.held",
+	"first_person_0":"animation.shell_item.first_person_0",
+	"first_person_1":"animation.shell_item.first_person_1"
+      },
+      "scripts":{
+	"animate":[
+	  {"3rd":"!c.is_first_person && !q.is_name_any('§§')"},
+	  {"first_person_0":"c.is_first_person && c.item_slot == 'main_hand'"},
+	  {"first_person_1":"c.is_first_person && c.item_slot != 'main_hand'"}
+	]
+      }
+    }
+  }
+}

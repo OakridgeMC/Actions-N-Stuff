@@ -1,0 +1,34 @@
+{
+  "format_version":"1.10.0",
+  "minecraft:attachable":{
+    "description":{
+      "identifier":"minecraft:experience_bottle",
+      "materials":{
+	"default":"entity_emissive",
+	"bottle":"entity_alphablend"
+      },
+      "textures":{
+	"xp_b0":"textures/entity/potion/xp/xp0",
+	"xp_b1":"textures/entity/potion/xp/xp1",
+	"xp_b2":"textures/entity/potion/xp/xp2",
+	"xp_b3":"textures/entity/potion/xp/xp3"
+      },
+      "geometry": {
+	"default":"geometry.splashy"
+      },
+      "render_controllers":[ "controller.render.xp_bottle_anim" ],
+      "animations":{
+	"villager_holding":"animation.item.bottle",
+	"3rd":"animation.item.bottle_position",
+	"1st":"animation.item.first_person_bottle"
+      },
+      "scripts":{
+	"animate":[
+	  {"3rd":"!c.is_first_person && !q.is_owner_identifier_any('minecraft:wandering_trader','minecraft:villager_v2') && !q.is_name_any('§§')"},
+	  {"villager_holding":"q.is_owner_identifier_any('minecraft:wandering_trader','minecraft:villager_v2')"},
+	  {"1st":"c.is_first_person"}
+	]
+      }
+    }
+  }
+}

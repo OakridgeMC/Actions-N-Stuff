@@ -1,0 +1,23 @@
+{
+  "format_version":"1.10.0",
+  "render_controllers":{
+    "controller.render.end_pearl":{
+      "geometry":"geometry.default",
+      "materials":[
+	{"*":"Material.default"},
+	{"glint":"Material.glint"},
+        {"core":"Material.core"}
+      ],
+      "textures":["texture.default"],
+      "ignore_lighting":true,
+      "light_color_multiplier":"1 + math.cos(query.life_time*1400)*0.5",
+      "on_fire_color":{"r":0,"g":0,"b":0,"a":0},
+      "overlay_color":{
+	"r":"1.0",
+	"g":"0.5 + math.cos(query.life_time*1400)*0.5",
+	"b":"1.0",
+	"a":"math.clamp(0.25+math.cos(query.life_time*700)*0.75,0,1)"
+      }
+    }
+  }
+}

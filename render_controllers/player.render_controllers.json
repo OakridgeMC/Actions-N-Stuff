@@ -1,0 +1,74 @@
+{
+  "format_version":"1.8.0",
+  "render_controllers":{
+    "controller.render.player.1st_person":{
+      "geometry":"Geometry.default",
+      "materials":[{"*":"Material.default"}],
+      "textures":["Texture.default"],
+      "part_visibility":[
+	{"*":false},
+	{"rightArm":"q.get_equipped_item_name(0) == ''"},
+	{"rightSleeve":"q.get_equipped_item_name(0) == ''"}
+      ],
+      "on_fire_color":{
+	"r":1.0,
+	"g":0.4,
+	"b":0.0,
+	"a":"math.cos(q.life_time*1200)*-0.35 + 0.35"
+      }
+    },
+    "controller.render.player.3rd_person":{
+      "geometry":"Geometry.default",
+      "materials":[
+	{"*":"Material.default"},
+	{"body":"Material.solid"},
+	{"head":"Material.solid"},
+	{"rightArm":"Material.solid"},
+	{"leftArm":"Material.solid"},
+	{"rightLeg":"Material.solid"},
+	{"leftLeg":"Material.solid"}
+      ],
+      "textures":["Texture.default"],
+      "part_visibility":[
+	{"*":true},
+	{"helmet":"v.helmet_layer_visible"},
+	{"leftLegging":"v.leg_layer_visible"},
+	{"rightLegging":"v.leg_layer_visible"},
+	{"leftBoot":"v.boot_layer_visible"},
+	{"rightBoot":"v.boot_layer_visible"},
+	{"leftSock":"v.boot_layer_visible && v.leg_layer_visible"},
+	{"rightSock":"v.boot_layer_visible && v.leg_layer_visible"},
+	{"bodyArmor":"v.chest_layer_visible"},
+	{"leftArmArmor":"v.chest_layer_visible"},
+	{"rightArmArmor":"v.chest_layer_visible"},
+	{"belt":"v.chest_layer_visible && v.leg_layer_visible"}
+      ],
+      "light_color_multiplier":"v.flash ? math.max(1,4-q.anim_time*10):1",
+      "on_fire_color":{
+	"r":1.0,
+	"g":0.4,
+	"b":0.0,
+	"a":"math.cos(q.life_time*1200)*-0.35 + 0.35"
+      },
+      "is_hurt_color":{
+	"r":1.0,
+	"g":"math.max(1-q.anim_time*4,0)",
+	"b":1.0,
+	"a":"v.flash ? math.max(0,1-q.anim_time*3.3):0.5"
+      }
+    },
+    "controller.render.player.spectator":{
+      "geometry":"Geometry.default",
+      "materials":[{"*":"Material.spectator"}],
+      "textures":["Texture.default"],
+      "part_visibility":[
+	{"*":false},
+	{"head":true}
+      ],
+      "ignore_lighting":true,
+      "light_color_multiplier":2.5,
+      "overlay_color":{"r":0.0,"g":0.2,"b":0.5,"a":0.8},
+      "color":{"r":0.7,"g":0.9,"b":1.0,"a":0.5}
+    }
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "format_version":"1.8.0",
+  "render_controllers":{
+    "controller.render.mesh_swap":{
+      "arrays":{
+	"geometries":{
+	  "array.models":["geometry.default","geometry.mesh"]
+	}
+      },
+      "geometry":"array.models[q.owner_identifier=='minecraft:villager']",
+      "materials":[{"*":"Material.default"}],
+      "textures":["q.owner_identifier=='minecraft:villager' ? texture.mesh:texture.default"]
+    }
+  }
+}

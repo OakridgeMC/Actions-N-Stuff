@@ -1,0 +1,225 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"animation.local_space.target": {
+			"loop": true,
+			"bones": {
+				"head": {
+					"relative_to": {
+						"rotation": "entity"
+					},
+					"rotation": ["query.target_x_rotation", "query.target_y_rotation", 0]
+				}
+			}
+		},
+		"animation.global_space.target": {
+			"loop": true,
+			"bones": {
+				"head": {
+					"rotation": ["query.target_x_rotation", "query.target_y_rotation", 0]
+				}
+			}
+		},
+		"animation.normal.target": {
+			"loop": true,
+			"bones": {
+				"head": {
+					"relative_to": {
+						"rotation": "entity"
+					},
+					"rotation": ["query.target_x_rotation*0.9", "query.target_y_rotation*0.75", 0]
+				},
+				"left_eye": {
+					"position": ["math.clamp(q.target_y_rotation*-0.012,0,1)", "math.clamp(q.target_x_rotation*-0.013,-0.5,0.5)", 0]
+				},
+				"right_eye": {
+					"position": ["math.clamp(q.target_y_rotation*-0.012,-1,0)", "math.clamp(q.target_x_rotation*-0.013,-0.5,0.5)", 0]
+				}
+			}
+		},
+		"animation.anthro.target": {
+			"loop": true,
+			"bones": {
+				"head": {
+					"relative_to": {
+						"rotation": "entity"
+					},
+					"rotation": ["query.target_x_rotation", "query.target_y_rotation", 0]
+				},
+				"waist": {
+					"rotation": ["(0.2*query.target_x_rotation)", "(0.35*query.target_y_rotation)", 0]
+				}
+			}
+		},
+		"animation.humanoid.target": {
+			"loop": true,
+			"bones": {
+				"head": {
+					"relative_to": {
+						"rotation": "entity"
+					},
+					"rotation": ["query.target_x_rotation", "query.target_y_rotation*0.86", 0]
+				},
+				"right_eye": {
+					"position": ["math.clamp(q.target_y_rotation*-0.01,-1,0)", 0, 0]
+				},
+				"left_eye": {
+					"position": ["math.clamp(q.target_y_rotation*-0.01,0,1)", 0, 0]
+				},
+				"waist": {
+					"rotation": ["0.2*query.target_x_rotation", "0.35*query.target_y_rotation", 0]
+				}
+			}
+		},
+		"animation.horizontal.target": {
+			"loop": true,
+			"bones": {
+				"head": {
+					"relative_to": {
+						"rotation": "entity"
+					},
+					"rotation": ["query.target_x_rotation", "query.target_y_rotation", 0]
+				}
+			}
+		},
+		"animation.villager.target": {
+			"loop": true,
+			"bones": {
+				"head": {
+					"relative_to": {
+						"rotation": "entity"
+					},
+					"rotation": ["query.target_x_rotation*0.5", "query.target_y_rotation*0.77", 0]
+				},
+				"right_eye": {
+					"position": ["math.clamp(q.target_y_rotation*-0.0125,-1,0.15)", "-0.0125*math.clamp(q.target_x_rotation,-90,30)", 0]
+				},
+				"left_eye": {
+					"position": ["math.clamp(q.target_y_rotation*-0.0125,-0.15,1)", "-0.0125*math.clamp(q.target_x_rotation,-90,30)", 0]
+				},
+				"waist": {
+					"rotation": ["(0.17*query.target_x_rotation)", "(0.3*query.target_y_rotation)", 0]
+				},
+				"monobrow": {
+					"rotation": [0, 0, "query.target_y_rotation*0.05"],
+					"position": [0, "-0.025*math.clamp(query.target_x_rotation,-45,0)+math.abs(query.target_y_rotation*0.001)", 0]
+				},
+				"eyelids": {
+					"scale": [1, "1-math.clamp(q.target_x_rotation*-0.015,0,1)", 1]
+				}
+			}
+		},
+		"animation.pillager.target": {
+			"loop": true,
+			"bones": {
+				"head": {
+					"relative_to": {
+						"rotation": "entity"
+					},
+					"rotation": ["query.target_x_rotation*0.8", "query.target_y_rotation*0.75", 0]
+				},
+				"left_eye": {
+					"position": ["math.clamp(q.target_y_rotation*-0.0125,0,1)", "-0.0125*math.clamp(q.target_x_rotation,-90,30)", 0]
+				},
+				"right_eye": {
+					"position": ["math.clamp(q.target_y_rotation*-0.0125,-1,0)", "-0.0125*math.clamp(q.target_x_rotation,-90,30)", 0]
+				},
+				"eyelids": {
+					"scale": [1, "1-math.clamp(q.target_x_rotation*-0.015,0,1)", 1]
+				},
+				"leftbrow": {
+					"position": [0, "-0.02*math.clamp(query.target_x_rotation,-60,0)", 0]
+				},
+				"rightbrow": {
+					"position": [0, "-0.02*math.clamp(query.target_x_rotation,-60,0)", 0]
+				}
+			}
+		},
+		"animation.ravager.target": {
+			"loop": true,
+			"bones": {
+				"head": {
+					"relative_to": {
+						"rotation": "entity"
+					},
+					"rotation": ["query.target_x_rotation", "query.target_y_rotation*0.8", 0]
+				},
+				"right_eye": {
+					"position": ["math.clamp(q.target_y_rotation*-0.024,-2,0)", 0, 0]
+				},
+				"left_eye": {
+					"position": ["math.clamp(q.target_y_rotation*-0.024,0,2)", 0, 0]
+				}
+			}
+		},
+		"animation.squint.target": {
+			"loop": true,
+			"bones": {
+				"head": {
+					"relative_to": {
+						"rotation": "entity"
+					},
+					"rotation": ["query.target_x_rotation", "query.target_y_rotation*0.75", 0]
+				},
+				"right_eye": {
+					"position": ["math.clamp(q.target_y_rotation*-0.015,0,1)", 0, 0]
+				},
+				"left_eye": {
+					"position": ["math.clamp(q.target_y_rotation*-0.015,-1,0)", 0, 0]
+				}
+			}
+		},
+		"animation.ender.target": {
+			"loop": true,
+			"bones": {
+				"waist": {
+					"rotation": ["0.2*query.target_x_rotation", "0.2*query.target_y_rotation", 0]
+				},
+				"head": {
+					"relative_to": {
+						"rotation": "entity"
+					},
+					"rotation": ["query.target_x_rotation*0.7", "query.target_y_rotation*0.7", 0]
+				},
+				"rightArm": {
+					"rotation": ["-0.2*query.target_x_rotation", 0, 0]
+				},
+				"leftArm": {
+					"rotation": ["-0.2*query.target_x_rotation", 0, 0]
+				},
+				"eyelids_top": {
+					"scale": [1, "1+math.clamp(query.target_x_rotation,-90,0)*0.006", 1]
+				},
+				"pupils": {
+					"position": ["query.target_y_rotation*-0.008", "query.target_x_rotation*-0.006", 0]
+				}
+			}
+		},
+		"animation.hex.target": {
+			"loop": true,
+			"bones": {
+				"waist": {
+					"rotation": [0, "0.35*query.target_y_rotation", 0]
+				},
+				"head": {
+					"relative_to": {
+						"rotation": "entity"
+					},
+					"rotation": ["0.3*query.target_x_rotation", "query.target_y_rotation", 0]
+				},
+				"monobrow": {
+					"position": [0, "-0.027*math.clamp(query.target_x_rotation,-75,0)", 0]
+				},
+				"right_eye": {
+					"position": [0, "-0.015*math.clamp(q.target_x_rotation,-90,30)", 0]
+				},
+				"left_eye": {
+					"position": [0, "-0.015*math.clamp(q.target_x_rotation,-90,30)", 0]
+				},
+				"eyelids": {
+					"scale": [1, "1-math.clamp(q.target_x_rotation*-0.025,0,1)", 1]
+				}
+			}
+		}
+	}
+}

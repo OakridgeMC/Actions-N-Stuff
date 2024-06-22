@@ -1,0 +1,10 @@
+{
+  "format_version":"1.8.0",
+  "render_controllers":{
+    "controller.render.zoglin_anim":{
+      "geometry":"Geometry.default",
+      "materials":[{"*":"Material.default"},{"legBR":"Material.bone"},{"head":"Material.eyes"}],
+      "textures":["Texture.default"]
+    }
+  }
+}

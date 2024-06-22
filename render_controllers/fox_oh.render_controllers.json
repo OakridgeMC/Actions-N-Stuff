@@ -1,0 +1,25 @@
+{
+  "format_version":"1.8.0",
+  "render_controllers":{
+    "controller.render.fox_oh":{
+      "arrays":{
+	"textures":{
+	  "Array.skins":["Texture.red","Texture.arctic"]
+	}
+      },
+      "geometry": "Geometry.default",
+      "part_visibility":[
+	{"head":"query.is_sleeping ? false : math.ceil(math.sin(q.anim_time*120)*0.45 +0.44)"},
+	{"head_sleep":"query.is_sleeping ? true : math.ceil(math.sin(q.anim_time*120)*-0.45 -0.44)"}
+      ],
+      "materials":[{"*":"Material.default"}],
+      "textures":["Array.skins[query.variant]"],
+      "on_fire_color":{
+	"r":1.0,
+	"g":0.4,
+	"b":0.0,
+	"a":"math.cos(q.life_time*1200)*-0.35 + 0.35"
+      }
+    }
+  }
+}

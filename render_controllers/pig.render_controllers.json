@@ -1,0 +1,22 @@
+{
+  "format_version":"1.8.0",
+  "render_controllers":{
+    "controller.render.pig_anim":{
+      "geometry":"Geometry.default",
+      "textures":["Texture.default"],
+      "materials":[
+	{"*":"Material.default"},
+	{"head":"Material.cull"},
+	{"blink":"Material.cull"},
+	{"saddle":"Material.saddle"}
+      ],
+      "part_visibility":[{"saddle":"query.is_saddled"}],
+      "on_fire_color":{
+	"r":1.0,
+	"g":0.4,
+	"b":0.0,
+	"a":"math.cos(q.life_time*1200)*-0.35 + 0.35"
+      }
+    }
+  }
+}

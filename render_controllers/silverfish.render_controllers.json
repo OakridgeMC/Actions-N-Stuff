@@ -1,0 +1,26 @@
+{
+  "format_version": "1.8.0",
+  "render_controllers": {
+    "controller.render.silverfish_anim": {
+      "geometry": "Geometry.default",
+      "materials": [
+	{"*":"Material.default"},
+	{"layer_*":"Material.body_layer"}
+      ],
+      "textures": ["Texture.default"],
+      "light_color_multiplier":"q.anim_time!=0 ? 3-q.anim_time*2.5:1",
+      "on_fire_color":{
+	"r":1.0,
+	"g":0.4,
+	"b":0.0,
+	"a":"math.cos(q.life_time*1200)*-0.35 + 0.35"
+      },
+      "is_hurt_color":{
+	"r":"q.is_alive?1:1-q.anim_time",
+	"g":"q.is_alive?0:1-q.anim_time/2",
+	"b":"!q.is_alive",
+	"a":"q.is_alive ? 0.6:1-q.anim_time"
+      }
+    }
+  }
+}

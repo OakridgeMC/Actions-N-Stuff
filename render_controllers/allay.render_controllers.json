@@ -1,0 +1,17 @@
+{
+  "format_version":"1.8.0",
+  "render_controllers":{
+    "controller.render.allay_anim":{
+      "geometry":"Geometry.default",
+      "materials":[
+	{"*":"Material.default"},
+	{"*wing":"Material.opaque"},
+	{"body":"Material.opaque"},
+	{"eye":"Material.glow"}
+      ],
+      "textures":["Texture.default"],
+      "light_color_multiplier":1.2,
+      "ignore_lighting":true
+    }
+  }
+}

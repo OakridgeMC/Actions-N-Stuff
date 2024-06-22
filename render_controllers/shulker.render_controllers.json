@@ -1,0 +1,34 @@
+{
+  "format_version":"1.8.0",
+  "render_controllers":{
+    "controller.render.shulker_anim":{
+      "arrays":{
+	"textures":{
+	  "Array.variants":["Texture.black","Texture.red","Texture.green","Texture.brown","Texture.blue","Texture.purple","Texture.cyan","Texture.silver","Texture.gray","Texture.pink","Texture.lime","Texture.yellow","Texture.light_blue","Texture.magenta","Texture.orange","Texture.white","Texture.undyed"]
+	}
+      },
+      "geometry":"Geometry.default",
+      "materials":[{"*":"Material.default"}],
+      "textures":["Array.variants[query.variant]"],
+      "light_color_multiplier":"q.anim_time>0 ? math.cos(q.anim_time*420)*5:1",
+      "overlay_color":{
+	"r":1.0,
+	"g":"1-q.anim_time*5",
+	"b":1.0,
+	"a":"q.anim_time>0 ? (1-q.anim_time*5):0"
+      },
+      "is_hurt_color":{
+	"r":1,
+	"g":"q.anim_time>0 ? (1-q.anim_time*5):0",
+	"b":"q.anim_time>0 ? 1:0",
+	"a":"q.anim_time>0 ? (1-q.anim_time*5):0.5"
+      }
+    },
+    "controller.render.shulker_spark":{
+      "geometry":"Geometry.default",
+      "materials":[{"*":"Material.default"},{"outer_layer":"Material.layer"}],
+      "textures":["Texture.default"],
+      "ignore_lighting":true
+    }
+  }
+}

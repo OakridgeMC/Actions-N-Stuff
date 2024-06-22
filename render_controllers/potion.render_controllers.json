@@ -1,0 +1,30 @@
+{
+  "format_version":"1.10.0",
+  "render_controllers":{
+    "controller.render.potion_anim":{
+      "arrays":{
+	"textures":{
+	  "Array.potion_skins":[
+	    "Texture.pot2",
+	    "Texture.pot3",
+	    "Texture.pot4",
+	    "Texture.pot5",
+	    "Texture.pot6",
+	    "Texture.pot7",
+	    "Texture.pot8",
+	    "Texture.pot9",
+	    "Texture.pot10",
+	    "Texture.pot11",
+	    "Texture.pot12",
+	    "Texture.pot13",
+	    "Texture.pot15",
+	    "Texture.pot16"
+	  ]
+	}
+      },
+      "geometry":"geometry.default",
+      "materials":[{"*":"Material.default"}, {"bottle":"Material.bottle"}],
+      "textures":["q.owner_identifier == 'minecraft:player' ? Texture.pot1 : Array.potion_skins[variable.potion_color]"]
+    }
+  }
+}

@@ -1,0 +1,51 @@
+{
+	"format_version": "1.10.0",
+	"particle_effect": {
+		"description": {
+			"identifier": "act:creeper_explosion_rays",
+			"basic_render_parameters": {
+				"material": "particles_opaque",
+				"texture": "textures/particle/z"
+			}
+		},
+		"curves": {
+			"variable.scaling": {
+				"type": "linear",
+				"input": "v.particle_age",
+				"horizontal_range": "v.particle_lifetime",
+				"nodes": [1.2, 0, 0]
+			}
+		},
+		"components": {
+			"minecraft:emitter_rate_instant": {
+				"num_particles": 20
+			},
+			"minecraft:emitter_lifetime_expression": {
+				"activation_expression": "query.swell_amount>1.035",
+				"expiration_expression": "v.emitter_age>2"
+			},
+			"minecraft:emitter_shape_sphere": {
+				"radius": 2,
+				"surface_only": true,
+				"direction": "inwards"
+			},
+			"minecraft:particle_lifetime_expression": {
+				"max_lifetime": "math.random(0.4,1.0)"
+			},
+			"minecraft:particle_initial_speed": "40 + v.particle_lifetime*24",
+			"minecraft:particle_motion_dynamic": {
+				"linear_drag_coefficient": 6.6
+			},
+			"minecraft:particle_appearance_billboard": {
+				"size": ["0.035 + variable.scaling", "0.035*(q.swell_amount==0)"],
+				"facing_camera_mode": "lookat_direction",
+				"uv": {
+					"texture_width": 11,
+					"texture_height": 11,
+					"uv": [0, 0],
+					"uv_size": [1, 1]
+				}
+			}
+		}
+	}
+}

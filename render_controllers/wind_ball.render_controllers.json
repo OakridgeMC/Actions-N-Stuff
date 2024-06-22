@@ -1,0 +1,32 @@
+{
+  "format_version":"1.10.0",
+  "render_controllers":{
+    "controller.render.fart_ball":{
+      "geometry":"geometry.default",
+      "materials":[{"*":"Material.default"}],
+      "arrays":{
+	"textures":{
+	  "Array.frames":[
+	"Texture.a",
+	"Texture.b",
+	"Texture.c",
+	"Texture.d",
+	"Texture.e",
+	"Texture.f",
+	"Texture.g",
+	"Texture.h",
+	"Texture.i",
+	"Texture.j",
+	"Texture.k",
+	"Texture.l",
+	"Texture.m",
+	"Texture.n",
+	"Texture.o",
+	"Texture.p"
+	  ]
+	}
+      },
+      "textures":["Array.frames[query.life_time*24]"]
+    }
+  }
+}

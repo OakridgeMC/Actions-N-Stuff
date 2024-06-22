@@ -1,0 +1,40 @@
+{
+  "format_version":"1.8.0",
+  "render_controllers":{
+    "controller.render.prop":{
+      "geometry":"Geometry.prop",
+      "materials":[{"*":"Material.default"}],
+      "textures":["Texture.prop"]
+    },
+    "controller.render.prop_other":{
+      "geometry":"Geometry.prop",
+      "materials":[{"*":"Material.default"},{"other":"Material.other"}],
+      "textures":["Texture.prop"]
+    },
+    "controller.render.prop_bucket":{
+      "geometry":"Geometry.prop",
+      "materials":[{"*":"Material.liquid"},{"other":"Material.other"}],
+      "textures":["Texture.prop"]
+    },
+    "controller.render.prop_contact":{
+      "arrays":{
+	"textures":{
+	  "Array.anim":["Texture.b0","Texture.b5","Texture.b1","Texture.b1","Texture.b2","Texture.b2","Texture.b3","Texture.b4","Texture.b5","Texture.b6","Texture.b7","Texture.b8","Texture.b9","Texture.b10"]
+	}
+      },
+      "geometry":"Geometry.prop",
+      "materials":[{"*":"Material.prop"}],
+      "textures":["Array.anim[math.min(14, query.anim_time * 18)]"]
+    },
+    "controller.render.prop_alt":{
+      "arrays":{
+	"geometries":{
+	  "array.alt":["geometry.prop","geometry.prop_alt"]
+	}
+      },
+      "geometry":"array.alt[v.is_prop]",
+      "materials":[{"*":"v.is_prop ? Material.default:Material.prop"}],
+      "textures":["v.is_prop ? Texture.prop_alt:Texture.prop"]
+    }
+  }
+}
