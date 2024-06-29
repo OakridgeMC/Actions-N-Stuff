@@ -1,2 +1,2 @@
 # Actions-N-Stuff
-AvgZing's modified version of the Actions N Stuff 1.0.2 Beta for the Oakridge: Survival Unhinged Server
+AvgZing's modified version of the Actions N Stuff 1.0.2 Beta for the Oakridge: Survival Unhinged Server. This eliminates unnecesary pack conflicts with Oakridge modifications. NOTE: This also eliminates armor stand animations due to other conflicts, as well as player animations due to [MCPE-74493](https://bugs.mojang.com/browse/MCPE-74493).

@@ -1,18 +1,18 @@
 {
     "format_version": 2,
     "header": {
-        "description":"It gives your world a more dynamic and lively feel by adding several new animations, particles, and other stuff! (Modified by AvgZing).",
-        "name": "Oakridge Modified Actions & Stuff §8(1.0.0)",
-        "uuid": "33b87fae-158c-4663-aa29-a3d70acbf0b3",
-        "version": [1, 0, 0],
+        "description":"Actions n Stuff animation pack Modified by AvgZing to eliminate Oakridge: Survival Unhinged conflicts.",
+        "name": "Oakridge Modified Actions & Stuff §8(1.5.0)",
+        "uuid": "6a30f2d0-4da4-4a3c-815f-41500a551b93",
+        "version": [1, 5, 0],
         "min_engine_version": [ 1, 20, 80 ]
     },
     "modules": [
         {
             "description": "ACT",
             "type": "resources",
-            "uuid": "33c0aaaf-dfcb-4de9-9184-eb1ba17cd774",
-            "version": [1, 0, 0]
+            "uuid": "cf041de2-d28e-4c88-a501-92424cc854b3",
+            "version": [1, 5, 0]
         }
     ]
 }
