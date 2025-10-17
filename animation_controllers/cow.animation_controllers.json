@@ -1,0 +1,83 @@
+{
+  "format_version": "1.19.60",
+  "animation_controllers": {
+    "controller.animation.oreville_ans.qrdcyez.qrdcyez": {
+      "states": {
+        "default": {
+          "animations": [
+            "iphtzkv.qrdcyez.zxbvhct",
+            "iphtzkv.qrdcyez.cbsebvj",
+            "hqfcbct.bdwyfpo",
+            "iphtzkv.hqfcbct.qlobuam",
+            "iphtzkv.hqfcbct.cpjhrkw",
+            "iphtzkv.hqfcbct.zijlcyt",
+            { "iphtzkv.hqfcbct.ejhetkg": "!q.is_in_ui" },
+            { "iphtzkv.gllboax_vrsrjmv.ifmasqj": "q.is_on_ground" }
+          ],
+          "transitions": [{ "riding": "q.is_riding" }]
+        },
+        "riding": {
+          "animations": [{ "hqfcbct.bdwyfpo": 0.5 }, "rolmmlp"],
+          "transitions": [{ "default": "!q.is_riding" }]
+        }
+      }
+    },
+    "controller.animation.oreville_ans.qrdcyez.qrdcyez.cbsebvj": {
+      "initial_state": "vcnwlon",
+      "states": {
+        "vcnwlon": {
+          "animations": [{ "vcnwlon": "q.modified_move_speed * 1.7" }],
+          "transitions": [
+            { "sxgcveo": "q.modified_move_speed > 0.6" },
+            { "nmmpsqz": "q.is_in_water" }
+          ],
+          "blend_transition": 0.12
+        },
+        "sxgcveo": {
+          "animations": [{ "sxgcveo": "q.modified_move_speed * 1.36" }],
+          "transitions": [
+            {
+              "vcnwlon": "q.modified_move_speed < 0.5 && q.any_animation_finished"
+            },
+            { "nmmpsqz": "q.is_in_water" }
+          ],
+          "blend_transition": 0.12
+        },
+        "nmmpsqz": {
+          "animations": ["hqfcbct.swim_akgslcr"],
+          "transitions": [{ "vcnwlon": "!q.is_in_water && q.is_on_ground" }],
+          "blend_transition": 0.24
+        }
+      }
+    },
+    "controller.animation.oreville_ans.qrdcyez.qrdcyez.zxbvhct": {
+      "states": {
+        "default": { "transitions": [{ "xfbsluy": "q.state_time > 0.24" }] },
+        "xfbsluy": {
+          "on_entry": ["v.pncgvkl = math.random(0, 6.33);"],
+          "transitions": [
+            { "zxbvhct": "q.state_time > v.pncgvkl" },
+            { "default": "q.ground_speed" }
+          ]
+        },
+        "zxbvhct": {
+          "on_entry": [
+            "v.gkdougj = v.sippkmq == 2 ? math.random_integer(0, 3): math.random_integer(0, 2);"
+          ],
+          "animations": [
+            { "zxbvhct_0": "v.gkdougj == 0" },
+            { "zxbvhct_1": "v.gkdougj == 1" },
+            { "zxbvhct_2": "v.gkdougj == 2" },
+            { "zxbvhct_3": "v.gkdougj == 3" }
+          ],
+          "transitions": [
+            {
+              "default": "q.any_animation_finished || (v.gkdougj == 0 && q.ground_speed)"
+            }
+          ],
+          "blend_transition": 0.24
+        }
+      }
+    }
+  }
+}

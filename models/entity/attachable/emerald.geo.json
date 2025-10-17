@@ -1,1 +1,0 @@
-{"format_version":"1.16.0","minecraft:geometry":[{"description":{"identifier":"geometry.emerald","texture_width":16,"texture_height":16},"bones":[{"name":"emerald","pivot":[0,0,0],"binding":"q.item_slot_to_bone_name(c.item_slot)","texture_meshes":[{"texture":"default","position":[8,-8,-0.5],"rotation":[-90,180,0]}]}]}]}

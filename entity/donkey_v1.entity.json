@@ -1,0 +1,103 @@
+{
+  "format_version": "1.21.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "minecraft:donkey",
+      "materials": { "default": "horse", "ynfkghe": "entity_alphatest" },
+      "geometry": { "default": "geometry.oreville_ans.yvyaanm" },
+      "animations": {
+        "fvkqler_havtnwz": "animation.oreville_ans.fvkqler.fvkqler_havtnwz",
+        "iphtzkv.mtgxxby_ebkyrqj.ifmasqj": "controller.animation.oreville_ans.bsytbia.mtgxxby_ebkyrqj.ifmasqj",
+        "gtlxbpv_omahkzq_vayhkdd": "animation.oreville_ans.vwysspo.gtlxbpv_omahkzq_vayhkdd",
+        "rwqtdmw_vmlclax": "animation.oreville_ans.vwysspo.rwqtdmw_vmlclax",
+        "vcnwlon": "animation.oreville_ans.vwysspo.vcnwlon",
+        "fdcmikw": "animation.oreville_ans.vwysspo.fdcmikw",
+        "sxgcveo": "animation.oreville_ans.vwysspo.sxgcveo",
+        "nmmpsqz": "animation.oreville_ans.vwysspo.nmmpsqz",
+        "qlobuam": "animation.oreville_ans.vwysspo.qlobuam",
+        "cpjhrkw": "animation.oreville_ans.vwysspo.cpjhrkw",
+        "zijlcyt": "animation.oreville_ans.vwysspo.zijlcyt",
+        "oafnzdx_ejhetkg": "animation.oreville_ans.vwysspo.oafnzdx_ejhetkg",
+        "oafnzdx_ghstgej": "animation.oreville_ans.vwysspo.oafnzdx_ghstgej",
+        "zxbvhct": "animation.oreville_ans.vwysspo.zxbvhct",
+        "zxbvhct_0": "animation.oreville_ans.vwysspo.zxbvhct_0",
+        "zxbvhct_1": "animation.oreville_ans.vwysspo.zxbvhct_1",
+        "zxbvhct_2": "animation.oreville_ans.vwysspo.zxbvhct_2",
+        "zxbvhct_3": "animation.oreville_ans.vwysspo.zxbvhct_3",
+        "zxbvhct_4": "animation.oreville_ans.vwysspo.zxbvhct_4",
+        "zxbvhct_5": "animation.oreville_ans.vwysspo.zxbvhct_5",
+        "rolmmlp": "animation.oreville_ans.vwysspo.rolmmlp",
+        "rolmmlp_ngpsipg": "animation.oreville_ans.vwysspo.rolmmlp_ngpsipg",
+        "ejhetkg": "animation.oreville_ans.hqfcbct.ejhetkg_akgslcr",
+        "iphtzkv.vwysspo.move": "controller.animation.oreville_ans.vwysspo.vwysspo.move",
+        "iphtzkv.vwysspo.rwqtdmw": "controller.animation.oreville_ans.vwysspo.vwysspo.rwqtdmw",
+        "iphtzkv.vwysspo.zijlcyt": "controller.animation.oreville_ans.vwysspo.vwysspo.zijlcyt",
+        "iphtzkv.vwysspo.zxbvhct": "controller.animation.oreville_ans.vwysspo.vwysspo.zxbvhct",
+        "iphtzkv.hqfcbct.qlobuam": "controller.animation.oreville_ans.bsytbia.hqfcbct.qlobuam",
+        "iphtzkv.hqfcbct.cpjhrkw": "controller.animation.oreville_ans.bsytbia.hqfcbct.cpjhrkw",
+        "iphtzkv.hqfcbct.ejhetkg": "controller.animation.oreville_ans.bsytbia.hqfcbct.ejhetkg",
+        "iphtzkv.xspnhpi_dxx.ctgeqwl_zmrungh": "controller.animation.oreville_ans.bsytbia.xspnhpi_dxx.ctgeqwl_zmrungh",
+        "iphtzkv.pphpbrc_dxx.ngpsipg": "controller.animation.oreville_ans.bsytbia.pphpbrc_dxx.ngpsipg",
+        "iphtzkv.vwysspo.vwysspo": "controller.animation.oreville_ans.vwysspo.vwysspo",
+        "iphtzkv.vwysspo.move_ngpsipg": "controller.animation.oreville_ans.vwysspo.vwysspo.move_ngpsipg",
+        "iphtzkv.gllboax_vrsrjmv.ifmasqj": "controller.animation.oreville_ans.bsytbia.gllboax_vrsrjmv.ifmasqj"
+      },
+      "scripts": {
+        "scale": "(v.bdyniad && !q.is_baby ? 0.5 : 1) * (0.87)",
+        "initialize": [
+          "v.vuodqvf = 0;",
+          "v.bdyniad = v.vuodqvf || q.is_baby || (!q.is_in_ui && q.is_name_any('baby', 'Baby', 'foal', 'Foal'));",
+          "v.actions_and_stuff = 1;",
+          "v.xbxcjgv = q.position(0);",
+          "v.dngrbik = q.position(2);",
+          "v.kqnxpvd = 0;",
+          "v.kajplqu = 0;",
+          "v.kgtxvcp = 0;",
+          "v.jzqnqao = 0;",
+          "v.zadvzkp = 0;",
+          "variable.bdyniad = 0;",
+          "v.ovqsxoa = 0;",
+          "v.pncgvkl = 0;",
+          "v.gkdougj = 0;",
+          "v.rfnoekx = 0;",
+          "v.dpygwmp = 0;",
+          "v.tumfnns = 0;",
+          "v.fwkxycb = 0;",
+          "v.atzsoek = 0;",
+          "v.loklhpa = 0;",
+          "v.lrvsghd = 0;",
+          "v.gwnkqvc = 0;"
+        ],
+        "pre_animation": [
+          "v.bdyniad = v.vuodqvf || q.is_baby || (!q.is_in_ui && q.is_name_any('baby', 'Baby', 'foal', 'Foal'));",
+          "v.actions_and_stuff = 1;",
+          "v.kqnxpvd = math.sin(q.body_y_rotation - v.kajplqu) * 90;",
+          "v.xbxcjgv = math.lerp(v.xbxcjgv, q.position(0), q.delta_time / 0.2);",
+          "v.dngrbik = math.lerp(v.dngrbik, q.position(2), q.delta_time / 0.2);",
+          "v.kgtxvcp = math.abs(q.position(0) - v.xbxcjgv) + math.abs(q.position(2) - v.dngrbik);",
+          "v.jzqnqao = math.lerp(v.jzqnqao, v.kgtxvcp > 1.5 || v.stand_anim ? 0 : v.kgtxvcp, 0.1);",
+          "v.zadvzkp = math.lerp(v.zadvzkp, v.kgtxvcp <= 1.5 || v.stand_anim ? 0 : math.min(v.kgtxvcp * 0.75, 1.25), 0.1);"
+        ],
+        "animate": [
+          "fvkqler_havtnwz",
+          "iphtzkv.mtgxxby_ebkyrqj.ifmasqj",
+          "iphtzkv.vwysspo.vwysspo",
+          "iphtzkv.vwysspo.move_ngpsipg",
+          "gtlxbpv_omahkzq_vayhkdd",
+          { "baby_transform": "v.bdyniad" },
+          "iphtzkv.pphpbrc_dxx.ngpsipg",
+          "iphtzkv.xspnhpi_dxx.ctgeqwl_zmrungh",
+          { "iphtzkv.gllboax_vrsrjmv.ifmasqj": "q.is_on_ground" }
+        ],
+        "variables": {
+          "variable.actions_and_stuff": "public",
+          "variable.bdyniad": "public"
+        },
+        "should_update_effects_offscreen": "1"
+      },
+      "spawn_egg": { "texture": "spawn_egg_donkey" },
+      "render_controllers": ["controller.render.oreville_ans.glexbuc"],
+      "textures": { "default": "textures/entity/donkey/iyxjboe" }
+    }
+  }
+}

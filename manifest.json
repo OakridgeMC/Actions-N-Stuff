@@ -1,18 +1,18 @@
 {
     "format_version": 2,
     "header": {
-        "description":"Actions n Stuff animation pack Modified by AvgZing to eliminate Oakridge: Survival Unhinged conflicts.",
-        "name": "Oakridge Modified Actions & Stuff §8(1.7.3)",
-        "uuid": "4a186eaf-0690-4796-8546-f1f0c5ca80c7",
-        "version": [1, 7, 3],
-        "min_engine_version": [ 1, 20, 80 ]
+        "description":"Animations Pack by AvgZing using Oreville Studios' original works, with heavy trimming for use on the Oakridge: Survival Unhinged personal realm and for other personal use. Included mobs: cat, chicken, cow, donkey, fox, horse, mule, pig, sheep, wolf.",
+        "name": "AvgZing-Oakridge Animations Pack §8(2.0.0)",
+        "uuid": "06cf3dc1-cf4b-4af6-9fc8-83d7b708a9ed",
+        "version": [2, 0, 0],
+        "min_engine_version": [ 1, 21, 50 ]
     },
     "modules": [
         {
             "description": "ACT",
             "type": "resources",
-            "uuid": "f1e20ba3-6a43-4da9-adda-6a5edf02544b",
-            "version": [1, 7, 3]
+            "uuid": "d8fe3690-aac0-4227-aee6-daf2dc7c2deb",
+            "version": [2, 0, 0]
         }
     ]
 }

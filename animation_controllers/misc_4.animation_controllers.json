@@ -1,0 +1,24 @@
+{
+  "format_version": "1.19.60",
+  "animation_controllers": {
+    "controller.animation.oreville_ans.bsytbia.mtgxxby_ebkyrqj.ifmasqj": {
+      "states": {
+        "default": {
+          "transitions": [
+            {
+              "fjtuafa": "q.is_riding_any_entity_of_type('minecraft:boat', 'minecraft:chest_boat')"
+            }
+          ]
+        },
+        "fjtuafa": {
+          "sound_effects": [{ "effect": "gbtztjx" }],
+          "transitions": [
+            {
+              "default": "!q.is_riding_any_entity_of_type('minecraft:boat', 'minecraft:chest_boat')"
+            }
+          ]
+        }
+      }
+    }
+  }
+}

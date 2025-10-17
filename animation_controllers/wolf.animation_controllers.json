@@ -1,1 +1,523 @@
-{"format_version":"1.10.0","animation_controllers":{"controller.animation.wolf_anim.angry":{"states":{"default":{"transitions":[{"angry":"q.is_angry"}]},"angry":{"animations":["wolf_angry","wolf_aggro"],"blend_transition":0.26,"transitions":[{"default":"!q.is_angry"}]}}},"controller.animation.wolf_anim.interested":{"states":{"default":{"transitions":[{"interested":"q.is_interested"}]},"interested":{"animations":["wolf_head_rot_z"],"blend_transition":0.36,"transitions":[{"default":"!q.is_interested&&q.any_animation_finished"}]}}},"controller.animation.wolf.shaking":{"states":{"default":{"transitions":[{"shaking":"q.is_shaking_wetness"}]},"shaking":{"animations":["wolf_shaking"],"transitions":[{"default":"!q.is_shaking_wetness&&q.any_animation_finished"}]}}},"controller.animation.wolf_anim.sit":{"states":{"default":{"animations":["controller_idle"],"transitions":[{"sitting":"q.is_sitting"}]},"sitting":{"animations":["wolf_sitting_cap","wolf_sitting"],"transitions":[{"standing":"!q.is_sitting&&q.all_animations_finished"}]},"standing":{"animations":["wolf_sitting_cap","wolf_standup"],"transitions":[{"default":"q.all_animations_finished"}]}}},"controller.animation.wolf_anim.movement":{"states":{"default":{"animations":[{"wolf_leg_default":"q.modified_move_speed"}],"blend_transition":0.12,"transitions":[{"chase":"q.has_target||q.is_avoiding_mobs"},{"swim":"q.is_in_water"}]},"chase":{"animations":[{"wolf_leg_chasing":"q.modified_move_speed"}],"blend_transition":0.16,"transitions":[{"default":"!q.has_target&&!q.is_avoiding_mobs&&q.ground_speed==0"},{"swim":"q.is_in_water"}]},"swim":{"animations":["wolf_swimming"],"blend_transition":0.2,"transitions":[{"chase":"q.has_target&&q.is_on_ground"},{"default":"!q.is_in_water&&q.is_on_ground"}]}}},"controller.animation.wolf_anim.base_animation":{"states":{"default":{"animations":["wolf_setup","wolf_look_at","wolf_blink",{"wolf_tail_default":"q.is_tamed"},{"wolf_baby_scaling":"q.is_baby"}]}}},"controller.animation.wolf_armor.damage":{"states":{"default":{"on_entry":["variable.damage=query.armor_damage_slot(1);"],"transitions":[{"damage":"variable.damage!=query.armor_damage_slot(1)"}]},"damage":{"on_exit":["variable.flash=0;"],"animations":["damage"],"transitions":[{"default":"q.any_animation_finished"}]}}}}}
+{
+  "format_version": "1.19.60",
+  "animation_controllers": {
+    "controller.animation.oreville_ans.jijpgcf.jijpgcf": {
+      "states": {
+        "default": {
+          "animations": [
+            "hhjrlam",
+            "iphtzkv.jijpgcf.cbsebvj",
+            "iphtzkv.hqfcbct.qlobuam",
+            "iphtzkv.hqfcbct.cpjhrkw",
+            "iphtzkv.hqfcbct.zijlcyt",
+            { "iphtzkv.gllboax_vrsrjmv.ifmasqj": "q.is_on_ground" }
+          ],
+          "transitions": [{ "riding": "q.is_riding" }]
+        },
+        "riding": {
+          "animations": ["hhjrlam"],
+          "transitions": [{ "default": "!q.is_riding" }]
+        }
+      }
+    },
+    "controller.animation.oreville_ans.jijpgcf.jijpgcf.ejhetkg": {
+      "states": {
+        "default": {
+          "on_entry": ["v.kajplqu = q.body_y_rotation;"],
+          "transitions": [
+            { "wkftgmg": "!v.pjcelan && v.kqnxpvd != 0 && !q.is_in_ui" }
+          ],
+          "blend_transition": 0.1,
+          "on_exit": ["v.kajplqu = q.body_y_rotation;"]
+        },
+        "wkftgmg": {
+          "animations": [
+            { "ejhetkg": "math.clamp(1.1 - q.modified_move_speed, 0.01, 1)" }
+          ],
+          "transitions": [{ "default": "q.any_animation_finished" }],
+          "blend_transition": 0.1
+        }
+      }
+    },
+    "controller.animation.oreville_ans.jijpgcf.jijpgcf.cogyszp": {
+      "states": {
+        "default": { "transitions": [{ "cogyszp": "q.is_angry" }] },
+        "cogyszp": {
+          "animations": ["cogyszp", "gfggyzv_gkbnvqq"],
+          "transitions": [{ "default": "!q.is_angry" }],
+          "blend_transition": 0.26
+        }
+      }
+    },
+    "controller.animation.oreville_ans.jijpgcf.jijpgcf.wnroddu": {
+      "states": {
+        "default": { "transitions": [{ "wnroddu": "q.is_interested" }] },
+        "wnroddu": {
+          "animations": ["wnroddu"],
+          "transitions": [
+            { "default": "!q.is_interested && q.any_animation_finished" }
+          ],
+          "blend_transition": 0.36
+        }
+      }
+    },
+    "controller.animation.oreville_ans.jijpgcf.jijpgcf.furiuhw": {
+      "states": {
+        "default": {
+          "on_entry": ["v.wdpnbyj = 0;"],
+          "transitions": [
+            { "eszyzyk": "q.is_in_contact_with_water" },
+            { "furiuhw": "q.is_shaking_wetness" }
+          ]
+        },
+        "eszyzyk": {
+          "on_entry": ["v.wdpnbyj = 0.5;"],
+          "transitions": [
+            {
+              "furiuhw": "q.is_shaking_wetness || (!q.is_in_contact_with_water && q.state_time > 45)"
+            },
+            { "eszyzyk": "q.is_in_contact_with_water && q.state_time > 1" }
+          ]
+        },
+        "furiuhw": {
+          "on_entry": ["v.wdpnbyj = 0;"],
+          "animations": ["furiuhw"],
+          "transitions": [
+            { "default": "!q.is_shaking_wetness && q.any_animation_finished" }
+          ]
+        }
+      }
+    },
+    "controller.animation.oreville_ans.jijpgcf.jijpgcf.rolmmlp": {
+      "states": {
+        "default": {
+          "on_entry": [
+            "v.ejusewf = math.random_integer(0, 1);",
+            "v.pjcelan = 0;"
+          ],
+          "animations": ["iphtzkv.jijpgcf.zxbvhct"],
+          "transitions": [
+            { "ncpnlno": "(v.ejusewf && q.is_sitting) || q.is_riding" },
+            { "arjgtds": "!v.ejusewf && q.is_sitting && !q.is_riding" }
+          ],
+          "blend_transition": 0.24
+        },
+        "ncpnlno": {
+          "on_entry": ["v.sfsoksl = q.body_y_rotation;"],
+          "animations": ["ckabqsl_kawwmtf", "ckabqsl_cwscbtb"],
+          "transitions": [{ "ckabqsl": "q.state_time > 0.625" }]
+        },
+        "ckabqsl": {
+          "on_entry": [
+            "v.pncgvkl = math.random(0, 6.33);",
+            "v.etzzqbt = 1;",
+            "v.onlxntw = 0;"
+          ],
+          "animations": ["ckabqsl_kawwmtf", "ckabqsl"],
+          "transitions": [
+            { "emgidsr": "!q.is_sitting && !q.is_riding" },
+            { "zxbvhct": "q.state_time > v.pncgvkl" }
+          ]
+        },
+        "emgidsr": {
+          "animations": ["ckabqsl_kawwmtf", "ckabqsl_fofftzt"],
+          "transitions": [{ "default": "q.state_time > 0.75" }],
+          "on_exit": ["v.etzzqbt = 0;"]
+        },
+        "arjgtds": {
+          "on_entry": ["v.sfsoksl = q.body_y_rotation;", "v.pjcelan = 1;"],
+          "animations": ["nesxtwu_cwscbtb", "nesxtwu_lrbzenm"],
+          "transitions": [
+            { "ckabqsl": "q.is_riding" },
+            { "nesxtwu": "q.state_time > 1.2917 / 1.5" }
+          ],
+          "blend_transition": 0.24
+        },
+        "nesxtwu": {
+          "on_entry": [
+            "v.pncgvkl = math.random(0, 6.33);",
+            "v.onlxntw = 1;",
+            "v.etzzqbt = 0;"
+          ],
+          "animations": ["nesxtwu"],
+          "transitions": [
+            { "ckabqsl": "q.is_riding" },
+            { "wntigag": "!q.is_sitting" },
+            { "zxbvhct": "q.state_time > v.pncgvkl" }
+          ],
+          "blend_transition": 0.24
+        },
+        "wntigag": {
+          "on_entry": ["v.pjcelan = 0;"],
+          "animations": ["nesxtwu_fofftzt"],
+          "transitions": [
+            { "ckabqsl": "q.is_riding" },
+            { "default": "q.state_time > 1.625 / 1.5" }
+          ],
+          "blend_transition": 0.24,
+          "on_exit": [
+            "v.wfvggtd = 1;",
+            "v.xydpjgp = 0;",
+            "v.btfapvt = 0;",
+            "v.onlxntw = 0;"
+          ]
+        },
+        "zxbvhct": {
+          "on_entry": [
+            "v.yelpfvn = v.etzzqbt ? math.random_integer(0, 3) : math.random_integer(4, 8);"
+          ],
+          "animations": [
+            { "rolmmlp_zxbvhct_0": "v.yelpfvn == 0" },
+            { "rolmmlp_zxbvhct_1": "v.yelpfvn == 1" },
+            { "rolmmlp_zxbvhct_2": "v.yelpfvn == 2" },
+            { "rolmmlp_zxbvhct_3": "v.yelpfvn == 3" },
+            { "nesxtwu_zxbvhct_0": "v.yelpfvn == 4" },
+            { "nesxtwu_zxbvhct_1": "v.yelpfvn == 5" },
+            { "nesxtwu_zxbvhct_2": "v.yelpfvn == 6" },
+            { "nesxtwu_zxbvhct_3": "v.yelpfvn == 7" }
+          ],
+          "transitions": [
+            { "cyjexkv": "v.yelpfvn == 8" },
+            {
+              "ckabqsl": "(v.onlxntw && q.is_riding) || (v.etzzqbt && q.state_time > 3.4583)"
+            },
+            { "nesxtwu": "v.onlxntw && q.state_time > 3.4583" },
+            { "emgidsr": "v.etzzqbt && !q.is_sitting && !q.is_riding" },
+            { "wntigag": "v.onlxntw && !q.is_sitting && !q.is_riding" }
+          ]
+        },
+        "cyjexkv": {
+          "on_entry": [
+            "v.wfvggtd = 0;",
+            "v.xydpjgp = 1;",
+            "v.hkdackh = 1;",
+            "v.btfapvt = 1;"
+          ],
+          "animations": ["nesxtwu_qsoshkp_cwscbtb", "nesxtwu_lrbzenm"],
+          "transitions": [
+            { "ckabqsl": "q.is_riding" },
+            { "tcznzbk": "q.state_time > 5.3333" }
+          ]
+        },
+        "tcznzbk": {
+          "on_entry": ["v.jwhvila = math.random(30, 60);"],
+          "animations": ["nesxtwu_qsoshkp", "nesxtwu_lrbzenm"],
+          "particle_effects": [{ "effect": "zgbihkh" }],
+          "transitions": [
+            { "ckabqsl": "q.is_riding" },
+            { "wntigag": "!q.is_sitting" },
+            { "emiccur": "q.state_time > v.jwhvila" }
+          ],
+          "blend_transition": 0.24
+        },
+        "emiccur": {
+          "animations": ["nesxtwu_qsoshkp_fofftzt"],
+          "transitions": [
+            { "ckabqsl": "q.is_riding" },
+            { "nesxtwu": "q.state_time > 3.25" },
+            { "wntigag": "!q.is_sitting" }
+          ],
+          "blend_transition": 0.24,
+          "on_exit": [
+            "v.wfvggtd = 1;",
+            "v.xydpjgp = 0;",
+            "v.hkdackh = 0;",
+            "v.btfapvt = 0;"
+          ]
+        }
+      }
+    },
+    "controller.animation.oreville_ans.jijpgcf.jijpgcf.zxbvhct": {
+      "states": {
+        "default": {
+          "on_entry": ["v.wfvggtd = 1;"],
+          "transitions": [
+            {
+              "xfbsluy": "q.state_time > 0.24 && !q.is_sitting && !q.is_riding"
+            }
+          ]
+        },
+        "xfbsluy": {
+          "on_entry": ["v.pncgvkl = math.random(0, 6.33);"],
+          "transitions": [
+            { "zxbvhct": "q.state_time > v.pncgvkl" },
+            { "default": "q.ground_speed" }
+          ]
+        },
+        "zxbvhct": {
+          "on_entry": ["v.gkdougj = math.random_integer(0, 6);"],
+          "animations": [
+            { "zxbvhct_0": "v.gkdougj == 0" },
+            { "zxbvhct_1": "v.gkdougj == 1" },
+            { "zxbvhct_2": "v.gkdougj == 2" },
+            { "zxbvhct_5": "v.gkdougj == 5" },
+            { "zxbvhct_6": "v.gkdougj == 6" }
+          ],
+          "transitions": [
+            { "zwxgtpe": "v.gkdougj == 3" },
+            { "vhhseax": "v.gkdougj == 4" },
+            {
+              "default": "q.any_animation_finished || (v.gkdougj == 0 && q.ground_speed) || q.is_sitting || q.is_riding"
+            }
+          ],
+          "blend_transition": 0.24,
+          "on_exit": ["v.wfvggtd = 1;"]
+        },
+        "zwxgtpe": {
+          "on_entry": ["v.sfsoksl = q.body_y_rotation;", "v.pjcelan = 1;"],
+          "animations": ["zxbvhct_3", "rolmmlp_ejhetkg"],
+          "transitions": [
+            {
+              "hpyxdue": "q.is_sitting || q.is_riding || (q.ground_speed > 1 && q.in_range(q.state_time, 0.25, 2.9))"
+            },
+            {
+              "default": "q.state_time > 3.375 || (q.ground_speed > 1 && !q.in_range(q.state_time, 0.25, 2.9))"
+            }
+          ],
+          "blend_transition": 0.24
+        },
+        "hpyxdue": {
+          "animations": [
+            "ckabqsl_fofftzt",
+            { "rolmmlp_ejhetkg": "1 - math.clamp(q.state_time / 0.5, 0, 1)" }
+          ],
+          "transitions": [
+            {
+              "default": "(q.is_sitting || q.is_riding && q.state_time > 0.5) || q.state_time > 0.75"
+            }
+          ],
+          "blend_transition": 0.24,
+          "on_exit": ["v.pjcelan = 0;"]
+        },
+        "vhhseax": {
+          "on_entry": ["v.sfsoksl = q.body_y_rotation;", "v.pjcelan = 1;"],
+          "animations": ["zxbvhct_4", "rolmmlp_ejhetkg"],
+          "transitions": [
+            {
+              "jysawzz": "q.is_sitting || q.is_riding || (q.ground_speed > 1 && q.in_range(q.state_time, 0.6, 2.5))"
+            },
+            {
+              "default": "q.state_time > 3.625 || (q.ground_speed > 1 && !q.in_range(q.state_time, 0.6, 2.5))"
+            }
+          ],
+          "blend_transition": 0.24
+        },
+        "jysawzz": {
+          "animations": [
+            "zxbvhct_4_fofftzt",
+            { "rolmmlp_ejhetkg": "1 - math.clamp(q.state_time / 0.5, 0, 1)" }
+          ],
+          "transitions": [
+            {
+              "default": "(q.is_sitting || q.is_riding && q.state_time > 0.45) || q.state_time > 0.875"
+            }
+          ],
+          "blend_transition": 0.24,
+          "on_exit": ["v.pjcelan = 0;"]
+        }
+      }
+    },
+    "controller.animation.oreville_ans.jijpgcf.jijpgcf.gkbnvqq": {
+      "states": {
+        "default": {
+          "blend_via_shortest_path": true,
+          "animations": ["gtlxbpv_omahkzq_gkbnvqq"],
+          "transitions": [
+            { "jbozhnh": "v.onlxntw && q.state_time > 0.2" },
+            { "liuddmj": "!v.wfvggtd && q.state_time > 0.2" }
+          ],
+          "blend_transition": {
+            "0.0": 1,
+            "0.0556": 0.99451,
+            "0.1111": 0.9561,
+            "0.1667": 0.85185,
+            "0.2222": 0.64883,
+            "0.2778": 0.35117,
+            "0.3333": 0.14815,
+            "0.3889": 0.0439,
+            "0.4444": 0.00549,
+            "0.5": 0
+          }
+        },
+        "liuddmj": {
+          "blend_via_shortest_path": true,
+          "animations": ["udvzaoz_uiizimt_head_ejhetkg"],
+          "transitions": [
+            { "jbozhnh": "v.onlxntw && v.wfvggtd && q.state_time > 0.2" },
+            { "default": "v.wfvggtd && q.state_time > 0.2" }
+          ],
+          "blend_transition": {
+            "0.0": 1,
+            "0.0556": 0.99451,
+            "0.1111": 0.9561,
+            "0.1667": 0.85185,
+            "0.2222": 0.64883,
+            "0.2778": 0.35117,
+            "0.3333": 0.14815,
+            "0.3889": 0.0439,
+            "0.4444": 0.00549,
+            "0.5": 0
+          }
+        },
+        "jbozhnh": {
+          "blend_via_shortest_path": true,
+          "animations": [
+            { "gtlxbpv_omahkzq_gkbnvqq_nesxtwu": "v.zddkery" },
+            "rolmmlp_ejhetkg"
+          ],
+          "transitions": [
+            { "default": "!v.onlxntw && q.state_time > 0.2" },
+            { "dbwxfkw": "!v.wfvggtd && q.state_time > 0.2" }
+          ],
+          "blend_transition": {
+            "0.0": 1,
+            "0.0556": 0.99451,
+            "0.1111": 0.9561,
+            "0.1667": 0.85185,
+            "0.2222": 0.64883,
+            "0.2778": 0.35117,
+            "0.3333": 0.14815,
+            "0.3889": 0.0439,
+            "0.4444": 0.00549,
+            "0.5": 0
+          }
+        },
+        "dbwxfkw": {
+          "blend_via_shortest_path": true,
+          "animations": ["rolmmlp_ejhetkg"],
+          "transitions": [
+            { "liuddmj": "!v.onlxntw && q.state_time > 0.2" },
+            { "jbozhnh": "v.wfvggtd && q.state_time > 0.2" }
+          ],
+          "blend_transition": {
+            "0.0": 1,
+            "0.0556": 0.99451,
+            "0.1111": 0.9561,
+            "0.1667": 0.85185,
+            "0.2222": 0.64883,
+            "0.2778": 0.35117,
+            "0.3333": 0.14815,
+            "0.3889": 0.0439,
+            "0.4444": 0.00549,
+            "0.5": 0
+          }
+        }
+      }
+    },
+    "controller.animation.oreville_ans.jijpgcf.jijpgcf.hjwhrxn": {
+      "states": {
+        "default": {
+          "animations": ["hjwhrxn"],
+          "transitions": [{ "judloeo": "!q.is_tamed || v.btfapvt" }],
+          "blend_transition": {
+            "0.0": 1,
+            "0.0556": 0.99451,
+            "0.1111": 0.9561,
+            "0.1667": 0.85185,
+            "0.2222": 0.64883,
+            "0.2778": 0.35117,
+            "0.3333": 0.14815,
+            "0.3889": 0.0439,
+            "0.4444": 0.00549,
+            "0.5": 0
+          }
+        },
+        "judloeo": {
+          "transitions": [{ "default": "q.is_tamed && !v.btfapvt" }],
+          "blend_transition": {
+            "0.0": 1,
+            "0.0556": 0.99451,
+            "0.1111": 0.9561,
+            "0.1667": 0.85185,
+            "0.2222": 0.64883,
+            "0.2778": 0.35117,
+            "0.3333": 0.14815,
+            "0.3889": 0.0439,
+            "0.4444": 0.00549,
+            "0.5": 0
+          }
+        }
+      }
+    },
+    "controller.animation.oreville_ans.jijpgcf.jijpgcf.cbsebvj": {
+      "states": {
+        "default": {
+          "animations": [{ "fdcmikw": "q.modified_move_speed" }],
+          "transitions": [
+            { "xfbsluy": "q.is_sitting" },
+            { "xdrxonz": "q.has_target" },
+            { "swim": "q.is_in_water" }
+          ],
+          "blend_transition": 0.12
+        },
+        "xdrxonz": {
+          "animations": [{ "sxgcveo": "q.modified_move_speed" }],
+          "transitions": [
+            { "xfbsluy": "q.is_sitting" },
+            { "default": "!q.has_target && q.ground_speed == 0" },
+            { "swim": "q.is_in_water" }
+          ],
+          "blend_transition": 0.16
+        },
+        "swim": {
+          "animations": ["swim"],
+          "transitions": [
+            { "xfbsluy": "q.is_sitting" },
+            { "xdrxonz": "q.has_target && q.is_on_ground" },
+            {
+              "default": "!q.is_in_water && (q.vertical_speed == 0 || q.is_on_ground)"
+            }
+          ],
+          "blend_transition": 0.2
+        },
+        "xfbsluy": {
+          "transitions": [
+            { "swim": "!q.is_sitting && q.is_in_water" },
+            { "default": "!q.is_sitting" }
+          ],
+          "blend_transition": 0.2
+        }
+      }
+    },
+    "controller.animation.oreville_ans.jijpgcf.jijpgcf.riding": {
+      "states": {
+        "default": { "transitions": [{ "hqpslyc": "q.is_riding" }] },
+        "hqpslyc": {
+          "on_entry": [
+            "v.xbxcjgv = q.position(0);",
+            "v.dngrbik = q.position(2);"
+          ],
+          "transitions": [
+            {
+              "lbwyhin": "q.is_riding_any_entity_of_type('minecraft:minecart')"
+            },
+            { "buaiuqp": "1" }
+          ]
+        },
+        "buaiuqp": {
+          "transitions": [
+            {
+              "lbwyhin": "q.is_riding_any_entity_of_type('minecraft:minecart')"
+            },
+            { "default": "!q.is_riding" }
+          ]
+        },
+        "lbwyhin": {
+          "animations": [
+            "vslwwno.riding_iaiyvlf_kadhbmz_ejhetkg",
+            { "lbwyhin_move": "math.clamp(v.rtkodiy,0.001,1)" }
+          ],
+          "transitions": [
+            {
+              "lbwyhin": "v.egdbzqe = math.clamp(q.ground_speed - math.abs(q.vertical_speed), 0, 1);v.rtkodiy = math.lerp(v.rtkodiy, v.egdbzqe, 0.1);return 0;"
+            },
+            { "default": "!q.is_riding" },
+            {
+              "buaiuqp": "!q.is_riding_any_entity_of_type('minecraft:minecart')"
+            }
+          ]
+        }
+      }
+    }
+  }
+}

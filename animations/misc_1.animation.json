@@ -1,0 +1,9 @@
+{
+  "format_version": "1.8.0",
+  "animations": {
+    "animation.oreville_ans.fvkqler.fvkqler_havtnwz": {
+      "loop": true,
+      "anim_time_update": "v.dpygwmp = 'custom'; return 0;"
+    }
+  }
+}

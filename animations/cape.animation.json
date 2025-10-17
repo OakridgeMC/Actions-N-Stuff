@@ -1,1 +1,0 @@
-{"format_version":"1.8.0","animations":{"animation.player.cape":{"loop":true,"bones":{"cape":{"rotation":["math.lerp(0,-118,q.cape_flap_amount)-2",0,"q.modified_move_speed*q.target_y_rotation*0.275"],"position":[0,"query.get_root_locator_offset('armor_offset.default_neck', 1)",0]}}}}}

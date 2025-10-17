@@ -1,0 +1,162 @@
+{
+  "format_version": "1.19.60",
+  "animation_controllers": {
+    "controller.animation.oreville_ans.vwysspo.vwysspo": {
+      "states": {
+        "default": {
+          "animations": [
+            "iphtzkv.vwysspo.zxbvhct",
+            { "iphtzkv.vwysspo.move": "!q.has_rider" },
+            "iphtzkv.vwysspo.rwqtdmw",
+            "iphtzkv.vwysspo.zijlcyt",
+            { "iphtzkv.hqfcbct.qlobuam": "v.stand_anim == 0" },
+            { "iphtzkv.hqfcbct.cpjhrkw": "v.stand_anim == 0" },
+            { "iphtzkv.hqfcbct.ejhetkg": "!q.is_in_ui" },
+            "oafnzdx_ghstgej",
+            { "oafnzdx_ejhetkg": "v.stand_anim" }
+          ],
+          "transitions": [{ "riding": "q.is_riding" }]
+        },
+        "riding": {
+          "animations": [
+            { "rolmmlp": "!q.has_rider" },
+            { "rolmmlp_ngpsipg": "q.has_rider" }
+          ],
+          "transitions": [{ "default": "!q.is_riding" }]
+        }
+      }
+    },
+    "controller.animation.oreville_ans.vwysspo.vwysspo.move": {
+      "states": {
+        "default": {
+          "animations": [{ "vcnwlon": "q.modified_move_speed" }],
+          "transitions": [
+            { "erfrywa": "!q.is_on_ground" },
+            { "sxgcveo": "q.ground_speed > 6" },
+            { "fdcmikw": "q.ground_speed > 3.1" }
+          ],
+          "blend_transition": 0.24
+        },
+        "fdcmikw": {
+          "animations": [{ "fdcmikw": "q.modified_move_speed" }],
+          "transitions": [
+            { "erfrywa": "!q.is_on_ground" },
+            { "default": "q.ground_speed < 2 && q.any_animation_finished" },
+            { "sxgcveo": "q.ground_speed > 6 && q.any_animation_finished" }
+          ],
+          "blend_transition": 0.24
+        },
+        "sxgcveo": {
+          "animations": [{ "sxgcveo": "q.modified_move_speed" }],
+          "transitions": [
+            { "erfrywa": "!q.is_on_ground" },
+            { "fdcmikw": "q.ground_speed < 3.6 && q.any_animation_finished" }
+          ],
+          "blend_transition": 0.24
+        },
+        "nmmpsqz": {
+          "animations": ["nmmpsqz"],
+          "transitions": [
+            { "sxgcveo": "q.is_on_ground && q.ground_speed > 6" },
+            { "fdcmikw": "q.is_on_ground && q.ground_speed > 3.1" },
+            { "default": "q.is_on_ground" }
+          ],
+          "blend_transition": 0.2
+        },
+        "erfrywa": {
+          "transitions": [
+            { "nmmpsqz": "q.is_in_water && q.state_time > 0.2" },
+            { "sxgcveo": "q.is_on_ground && q.ground_speed > 6" },
+            { "fdcmikw": "q.is_on_ground && q.ground_speed > 3.1" },
+            { "default": "q.is_on_ground" }
+          ],
+          "blend_transition": 0.2
+        }
+      }
+    },
+    "controller.animation.oreville_ans.vwysspo.vwysspo.move_ngpsipg": {
+      "states": {
+        "default": {
+          "animations": [{ "zxbvhct": "q.is_riding ? 0.5 : 1" }],
+          "transitions": [{ "move": "q.has_rider" }]
+        },
+        "move": {
+          "animations": [
+            "zxbvhct",
+            { "fdcmikw": "math.clamp(v.jzqnqao*1.4,0.001,1)" },
+            { "sxgcveo": "math.max(v.zadvzkp,0.001)" }
+          ],
+          "transitions": [{ "default": "!q.has_rider" }]
+        }
+      }
+    },
+    "controller.animation.oreville_ans.vwysspo.vwysspo.rwqtdmw": {
+      "states": {
+        "default": {
+          "transitions": [
+            { "xcsnfwi": "q.ground_speed - math.abs(q.vertical_speed) > 6" }
+          ]
+        },
+        "xcsnfwi": {
+          "animations": ["rwqtdmw_vmlclax"],
+          "transitions": [{ "default": "q.ground_speed < 5" }],
+          "blend_transition": 0.24
+        }
+      }
+    },
+    "controller.animation.oreville_ans.vwysspo.vwysspo.zijlcyt": {
+      "states": {
+        "default": {
+          "on_entry": ["v.ovqsxoa = 1;"],
+          "animations": ["zijlcyt"],
+          "transitions": [{ "zpsaddc": "!q.is_on_ground" }],
+          "blend_transition": 0.1
+        },
+        "zpsaddc": {
+          "on_entry": ["v.ovqsxoa = 0;"],
+          "transitions": [{ "vihdcao": "q.is_on_ground" }]
+        },
+        "vihdcao": {
+          "transitions": [
+            { "zpsaddc": "!q.is_on_ground" },
+            { "default": "q.state_time > 0.15" }
+          ]
+        }
+      }
+    },
+    "controller.animation.oreville_ans.vwysspo.vwysspo.zxbvhct": {
+      "states": {
+        "default": { "transitions": [{ "xfbsluy": "q.state_time > 0.2" }] },
+        "xfbsluy": {
+          "on_entry": ["v.pncgvkl = math.random(0, 6.4);"],
+          "transitions": [
+            { "zxbvhct": "q.state_time > v.pncgvkl" },
+            { "oqjstpu": "v.shake_tail" },
+            { "default": "q.ground_speed" }
+          ]
+        },
+        "zxbvhct": {
+          "on_entry": ["v.gkdougj = math.random_integer(0, 5);"],
+          "animations": [
+            { "zxbvhct_0": "v.gkdougj == 0" },
+            { "zxbvhct_1": "v.gkdougj == 1" },
+            { "zxbvhct_2": "v.gkdougj == 2" },
+            { "zxbvhct_3": "v.gkdougj == 3" },
+            { "zxbvhct_4": "v.gkdougj == 4" },
+            { "zxbvhct_5": "v.gkdougj == 5" }
+          ],
+          "transitions": [
+            {
+              "default": "q.any_animation_finished || (v.gkdougj == 0 && q.ground_speed)"
+            }
+          ],
+          "blend_transition": 0.2
+        },
+        "oqjstpu": {
+          "animations": ["zxbvhct_4"],
+          "transitions": [{ "default": "q.any_animation_finished" }]
+        }
+      }
+    }
+  }
+}

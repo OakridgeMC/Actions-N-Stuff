@@ -1,1 +1,0 @@
-{"format_version":"1.10.0","animation_controllers":{"controller.animation.elytra.particles":{"states":{"default":{"transitions":[{"gliding":"query.ground_speed>16&&q.is_gliding"}]},"gliding":{"particle_effects":[{"effect":"trail"}],"transitions":[{"default":"query.ground_speed<16||!q.is_gliding"}]}}}}}

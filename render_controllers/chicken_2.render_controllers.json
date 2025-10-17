@@ -1,0 +1,11 @@
+{
+  "format_version": "1.10.0",
+  "render_controllers": {
+    "controller.render.oreville_ans.baqkjbk.kqxjqkd": {
+      "geometry": "Geometry.qaixobr",
+      "textures": ["Texture.ysnguaa"],
+      "ignore_lighting": true,
+      "materials": [{ "*": "Material.vvwpvxv" }]
+    }
+  }
+}

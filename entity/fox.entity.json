@@ -1,1 +1,117 @@
-{"format_version":"1.10.0","minecraft:client_entity":{"description":{"identifier":"minecraft:fox","materials":{"default":"entity_alphatest_culling"},"textures":{"red":"textures/entity/fox/red","arctic":"textures/entity/fox/white"},"geometry":{"default":"geometry.fox_anim"},"animations":{"walk":"animation.quadruped.fox_walk","swim":"animation.wolf_anim.swim","run":"animation.wolf_anim.run","idle_0":"animation.wolf_anim.idle_anim_1","idle_1":"animation.pig_idle.anim_1","idle_2":"animation.wolf_anim.idle_anim_2","idle_timer":"animation.idle_timer","sleep":"animation.fox_anim.sleep","wake_up":"animation.fox_anim.wake_up","sit":"animation.fox_anim.sit","stand_up":"animation.fox_anim.stand_up","look_at_target":"animation.squint.target","baby_transform":"animation.fox_anim.baby","crouch":"animation.fox_anim.has_target","setup":"animation.fox_anim.idle_bob","pounce":"animation.fox_anim.pounce","move":"controller.animation.fox_oh.move","jump_timer":"animation.jump_timer","jump":"animation.quadruped.jump","fall":"animation.quadruped.fall","land":"animation.cat_anim.land","controller_in_air":"controller.animation.in_air","controller_jump":"controller.animation.quadruped_up","controller_fall":"controller.animation.quadruped_dn","controller_land":"controller.animation.quadruped_land","controller_fire":"controller.animation.entity.on_fire","controller_sitting":"controller.animation.fox_oh.sit","controller_aggro":"controller.animation.fox_oh.aggro","controller_sleep":"controller.animation.fox_oh.sleep","controller_idle":"controller.animation.entity.idle_peaceful"},"scripts":{"animate":[{"baby_transform":"query.is_baby"},"move","controller_fire","controller_in_air","controller_aggro","controller_sitting","controller_sleep"]},"particle_effects":{"sleeping":"act:sleep","fire":"act:on_fire_small","combust":"act:combust_tiny","splash":"act:water_splash_mid","impact":"act:water_impact_mid","ripples":"act:water_ripples"},"render_controllers":["controller.render.fox_oh"],"spawn_egg":{"texture":"spawn_egg","texture_index":55}}}}
+{
+  "format_version": "1.21.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "minecraft:fox",
+      "materials": { "default": "fox" },
+      "geometry": {
+        "default": "geometry.oreville_ans.xsbocwu",
+        "bfllrqt": "geometry.oreville_ans.cfmfjbu",
+        "xghlgzr": "geometry.oreville_ans.qwtbbvk",
+        "ukhwdvg": "geometry.oreville_ans.txmvyku"
+      },
+      "animations": {
+        "fvkqler_havtnwz": "animation.oreville_ans.fvkqler.fvkqler_havtnwz",
+        "iphtzkv.mtgxxby_ebkyrqj.ifmasqj": "controller.animation.oreville_ans.bsytbia.mtgxxby_ebkyrqj.ifmasqj",
+        "qlobuam": "animation.oreville_ans.hqfcbct.qlobuam",
+        "cpjhrkw": "animation.oreville_ans.hqfcbct.cpjhrkw",
+        "zijlcyt": "animation.oreville_ans.hqfcbct.zijlcyt",
+        "ejhetkg": "animation.oreville_ans.hqfcbct.ejhetkg",
+        "sxgcveo": "animation.oreville_ans.jijpgcf.sxgcveo",
+        "zxbvhct_0": "animation.oreville_ans.jijpgcf.zxbvhct_1",
+        "zxbvhct_1": "animation.oreville_ans.ppsjcov.zxbvhct_1",
+        "zxbvhct_2": "animation.oreville_ans.jijpgcf.zxbvhct_2",
+        "iphtzkv.hqfcbct.ejhetkg": "controller.animation.oreville_ans.bsytbia.hqfcbct.ejhetkg",
+        "iphtzkv.hqfcbct.qlobuam": "controller.animation.oreville_ans.bsytbia.hqfcbct.qlobuam",
+        "iphtzkv.hqfcbct.cpjhrkw": "controller.animation.oreville_ans.bsytbia.hqfcbct.cpjhrkw",
+        "iphtzkv.hqfcbct.zijlcyt": "controller.animation.oreville_ans.bsytbia.hqfcbct.zijlcyt",
+        "iphtzkv.xspnhpi_dxx.zxbvhct_aifisui": "controller.animation.oreville_ans.bsytbia.xspnhpi_dxx.zxbvhct_aifisui",
+        "iphtzkv.xspnhpi_dxx.ctgeqwl_zmrungh": "controller.animation.oreville_ans.bsytbia.xspnhpi_dxx.ctgeqwl_zmrungh",
+        "jijpgcf.swim": "animation.oreville_ans.jijpgcf.swim",
+        "gkbnvqq.owfjdjs": "animation.oreville_ans.gkbnvqq.owfjdjs",
+        "iphtzkv.gllboax_vrsrjmv.ifmasqj": "controller.animation.oreville_ans.bsytbia.gllboax_vrsrjmv.ifmasqj",
+        "rkwlfgo": "animation.oreville_ans.fvyqrbz.rkwlfgo",
+        "zxbvhct_dhyaxuw": "animation.oreville_ans.fvyqrbz.zxbvhct_dhyaxuw",
+        "gfggyzv_gkbnvqq": "animation.oreville_ans.fvyqrbz.gfggyzv_gkbnvqq",
+        "erfrywa": "animation.oreville_ans.fvyqrbz.erfrywa",
+        "rolmmlp": "animation.oreville_ans.fvyqrbz.rolmmlp",
+        "hhjrlam_bghnmsg": "animation.oreville_ans.fvyqrbz.hhjrlam_bghnmsg",
+        "qsoshkp": "animation.oreville_ans.fvyqrbz.qsoshkp",
+        "uyoazhn_bghnmsg": "animation.oreville_ans.fvyqrbz.uyoazhn_bghnmsg",
+        "vcnwlon": "animation.oreville_ans.fvyqrbz.vcnwlon",
+        "iphtzkv.fvyqrbz.move": "controller.animation.oreville_ans.fvyqrbz.fvyqrbz.move",
+        "iphtzkv.fvyqrbz.ssmphvt": "controller.animation.oreville_ans.fvyqrbz.fvyqrbz.ssmphvt",
+        "iphtzkv.fvyqrbz.rolmmlp": "controller.animation.oreville_ans.fvyqrbz.fvyqrbz.rolmmlp",
+        "iphtzkv.fvyqrbz.qsoshkp": "controller.animation.oreville_ans.fvyqrbz.fvyqrbz.qsoshkp"
+      },
+      "scripts": {
+        "pre_animation": [
+          "v.bdyniad = v.vuodqvf || q.is_baby;",
+          "v.actions_and_stuff = 1;",
+          "v.kqnxpvd = math.sin(q.body_y_rotation - v.kajplqu) * 90;"
+        ],
+        "animate": [
+          "iphtzkv.fvyqrbz.move",
+          "iphtzkv.fvyqrbz.ssmphvt",
+          "iphtzkv.fvyqrbz.rolmmlp",
+          "iphtzkv.fvyqrbz.qsoshkp",
+          "fvkqler_havtnwz",
+          "iphtzkv.mtgxxby_ebkyrqj.ifmasqj",
+          { "rkwlfgo": "v.bdyniad" },
+          { "iphtzkv.hqfcbct.ejhetkg": "!q.is_in_ui" },
+          "iphtzkv.xspnhpi_dxx.ctgeqwl_zmrungh",
+          "iphtzkv.hqfcbct.qlobuam",
+          "iphtzkv.hqfcbct.cpjhrkw",
+          "iphtzkv.hqfcbct.zijlcyt",
+          { "iphtzkv.gllboax_vrsrjmv.ifmasqj": "q.is_on_ground" }
+        ],
+        "initialize": [
+          "v.vuodqvf = 0;",
+          "v.bdyniad = v.vuodqvf || q.is_baby;",
+          "v.actions_and_stuff = 1;",
+          "v.kqnxpvd = 0;",
+          "v.kajplqu = 0;",
+          "variable.bdyniad = 0;",
+          "v.rfnoekx = 0;",
+          "v.dpygwmp = 0;",
+          "v.gwnkqvc = 0;",
+          "v.ovqsxoa = 0;",
+          "v.pncgvkl = 0;",
+          "v.gkdougj = 0;",
+          "v.tumfnns = 0;",
+          "v.fwkxycb = 0;",
+          "v.atzsoek = 0;",
+          "v.loklhpa = 0;",
+          "v.bzqxjti = 0;",
+          "v.htaogjf = 0;",
+          "v.twozkac = 0;",
+          "v.cotkuwn = 0;",
+          "v.ncrlqem = 0;",
+          "v.sfsoksl = 0;",
+          "v.hkdackh = 0;",
+          "v.wfvggtd = 0;",
+          "v.xydpjgp = 0;",
+          "v.caugnpk = 0;",
+          "v.zqftywd = 0;"
+        ],
+        "scale": "(v.bdyniad && !q.is_baby ? 0.5 : 1) * (1)",
+        "variables": {
+          "variable.actions_and_stuff": "public",
+          "variable.bdyniad": "public"
+        },
+        "should_update_effects_offscreen": "1"
+      },
+      "spawn_egg": { "texture": "spawn_egg_fox" },
+      "textures": {
+        "vapxfzq": "textures/entity/fox/fox",
+        "apkhywl": "textures/entity/fox/arctic_fox",
+        "lsdhuxf": "textures/entity/fox/fvyqrbz_rkwlfgo_amvjvpw",
+        "yxwvbuv": "textures/entity/fox/fvyqrbz_rkwlfgo_ytozxca"
+      },
+      "render_controllers": [
+        "controller.render.oreville_ans.fvyqrbz",
+        "controller.render.oreville_ans.fvyqrbz.bgzlujc"
+      ]
+    }
+  }
+}

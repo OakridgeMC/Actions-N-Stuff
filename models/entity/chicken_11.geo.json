@@ -1,0 +1,31 @@
+{
+  "format_version": "1.12.0",
+  "minecraft:geometry": [
+    {
+      "description": {
+        "identifier": "geometry.oreville_ans.bprskmm",
+        "texture_width": 1,
+        "texture_height": 1,
+        "visible_bounds_width": 3,
+        "visible_bounds_height": 2.5,
+        "visible_bounds_offset": [0, 0.75, 0]
+      },
+      "bones": [
+        { "name": "root", "pivot": [0, 0, 0] },
+        { "name": "body", "parent": "root", "pivot": [0, 8, 0] },
+        {
+          "name": "fsdyhky3",
+          "parent": "body",
+          "pivot": [0, 11, -1],
+          "cubes": [
+            {
+              "origin": [-9, 2, -11.25],
+              "size": [18, 18, 0],
+              "uv": { "north": { "uv": [0, 0], "uv_size": [1, 1] } }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,264 @@
+{
+  "format_version": "1.19.60",
+  "animation_controllers": {
+    "controller.animation.oreville_ans.bsytbia.xspnhpi_dxx.qlobuam": {
+      "states": {
+        "default": {
+          "transitions": [
+            {
+              "qlobuam": "!q.is_on_ground && !q.is_in_water && q.vertical_speed > 0.5"
+            }
+          ]
+        },
+        "qlobuam": {
+          "animations": ["qlobuam"],
+          "transitions": [
+            {
+              "default": "q.is_on_ground || q.is_in_water || q.vertical_speed < -0.15"
+            }
+          ],
+          "blend_transition": 0.24
+        }
+      }
+    },
+    "controller.animation.oreville_ans.bsytbia.xspnhpi_dxx.cpjhrkw": {
+      "states": {
+        "default": {
+          "transitions": [
+            { "cpjhrkw": "!q.is_on_ground && q.vertical_speed < -0.5" }
+          ]
+        },
+        "cpjhrkw": {
+          "animations": ["cpjhrkw"],
+          "transitions": [
+            {
+              "default": "(q.is_on_ground && v.ovqsxoa) || (q.vertical_speed > 0.1 && q.state_time > 0.1)"
+            },
+            { "yzuhatb": "q.is_in_water" }
+          ],
+          "blend_transition": 0.16
+        },
+        "yzuhatb": {
+          "particle_effects": [
+            { "effect": "yzuhatb" },
+            { "effect": "lhxtofp" },
+            { "effect": "kakxdfa" }
+          ],
+          "transitions": [{ "default": "!q.is_in_water" }]
+        }
+      }
+    },
+    "controller.animation.oreville_ans.bsytbia.xspnhpi_dxx.zijlcyt": {
+      "states": {
+        "default": {
+          "on_entry": ["v.ovqsxoa = 1;"],
+          "animations": ["zijlcyt"],
+          "transitions": [{ "zpsaddc": "!q.is_on_ground" }],
+          "blend_transition": 0.1
+        },
+        "zpsaddc": {
+          "on_entry": ["v.ovqsxoa = 0;"],
+          "transitions": [{ "vihdcao": "q.is_on_ground" }]
+        },
+        "vihdcao": {
+          "transitions": [
+            { "zpsaddc": "!q.is_on_ground" },
+            { "default": "q.state_time > 0.15" }
+          ]
+        }
+      }
+    },
+    "controller.animation.oreville_ans.bsytbia.xspnhpi_dxx.hzrffar": {
+      "states": {
+        "default": { "transitions": [{ "dedktkm": "!q.is_alive" }] },
+        "dedktkm": { "animations": ["uxfyxry_pocxtuj", "uxfyxry_vlcjied"] }
+      }
+    },
+    "controller.animation.oreville_ans.bsytbia.xspnhpi_dxx.ctgeqwl_zmrungh": {
+      "states": {
+        "default": { "transitions": [{ "xhobljx": "q.is_on_fire" }] },
+        "xhobljx": {
+          "particle_effects": [{ "effect": "zmrungh" }],
+          "transitions": [{ "qdalbqy": "!q.is_on_fire" }]
+        },
+        "qdalbqy": {
+          "particle_effects": [{ "effect": "qdalbqy" }],
+          "transitions": [{ "default": "1" }]
+        }
+      }
+    },
+    "controller.animation.oreville_ans.bsytbia.xspnhpi_dxx.orzlhpc_yzuhatb": {
+      "states": {
+        "default": {
+          "transitions": [{ "zpsaddc": "!q.is_in_water && q.life_time > 0.06" }]
+        },
+        "zpsaddc": { "transitions": [{ "orsqxoi": "q.is_in_water" }] },
+        "orsqxoi": {
+          "particle_effects": [
+            { "effect": "yzuhatb" },
+            { "effect": "lhxtofp" },
+            { "effect": "kakxdfa" }
+          ],
+          "transitions": [{ "default": "!q.is_in_water" }]
+        }
+      }
+    },
+    "controller.animation.oreville_ans.bsytbia.xspnhpi_dxx.zxbvhct": {
+      "states": {
+        "default": { "transitions": [{ "xfbsluy": "q.state_time > 0.3" }] },
+        "xfbsluy": {
+          "on_entry": ["v.pncgvkl = math.random(0, 6.33);"],
+          "transitions": [
+            { "zxbvhct": "q.state_time > v.pncgvkl" },
+            { "default": "q.ground_speed" }
+          ]
+        },
+        "zxbvhct": {
+          "on_entry": ["v.gkdougj = math.random_integer(0, 1);"],
+          "animations": [
+            { "zxbvhct_0": "v.gkdougj == 0" },
+            { "zxbvhct_1": "v.gkdougj == 1" }
+          ],
+          "transitions": [
+            { "default": "q.any_animation_finished || q.ground_speed > 0" }
+          ],
+          "blend_transition": 0.3
+        }
+      }
+    },
+    "controller.animation.oreville_ans.bsytbia.xspnhpi_dxx.zxbvhct_aifisui": {
+      "states": {
+        "default": { "transitions": [{ "xfbsluy": "q.state_time > 0.24" }] },
+        "xfbsluy": {
+          "on_entry": ["v.pncgvkl = math.random(0, 6.33);"],
+          "transitions": [
+            { "zxbvhct": "q.state_time > v.pncgvkl" },
+            { "default": "q.ground_speed" }
+          ]
+        },
+        "zxbvhct": {
+          "on_entry": ["v.gkdougj = math.random_integer(0, 2);"],
+          "animations": [
+            { "zxbvhct_0": "v.gkdougj == 0" },
+            { "zxbvhct_1": "v.gkdougj == 1" },
+            { "zxbvhct_2": "v.gkdougj == 2" }
+          ],
+          "transitions": [
+            {
+              "default": "q.any_animation_finished || (v.gkdougj == 0 && q.ground_speed)"
+            }
+          ],
+          "blend_transition": 0.24
+        }
+      }
+    },
+    "controller.animation.oreville_ans.bsytbia.xspnhpi_dxx.zxbvhct_groipyn": {
+      "states": {
+        "default": {
+          "transitions": [{ "xfbsluy": "q.state_time > 0.3 && !q.has_target" }]
+        },
+        "xfbsluy": {
+          "on_entry": ["v.pncgvkl = math.random(0, 6.33);"],
+          "transitions": [
+            { "default": "q.has_target || q.ground_speed" },
+            { "zxbvhct": "q.state_time > v.pncgvkl" }
+          ]
+        },
+        "zxbvhct": {
+          "on_entry": ["v.gkdougj = math.random_integer(0, 2);"],
+          "animations": [
+            { "zxbvhct_0": "v.gkdougj == 0" },
+            { "zxbvhct_1": "v.gkdougj == 1" },
+            { "zxbvhct_2": "v.gkdougj == 2" }
+          ],
+          "transitions": [
+            { "default": "q.any_animation_finished || q.has_target" }
+          ],
+          "blend_transition": 0.3
+        }
+      }
+    },
+    "controller.animation.oreville_ans.bsytbia.xspnhpi_dxx.fjtuafa": {
+      "states": {
+        "default": {
+          "transitions": [
+            { "qbvgjzd": "v.tumfnns && !v.fwkxycb && q.state_time > 0.1" }
+          ]
+        },
+        "qbvgjzd": {
+          "particle_effects": [
+            { "effect": "avfpuew" },
+            { "effect": "kjqekqd" }
+          ],
+          "transitions": [
+            { "txrqliw": "v.tumfnns && !v.fwkxycb && q.state_time > 0.1" },
+            { "default": "(!v.tumfnns || v.fwkxycb) && q.state_time > 0.1" }
+          ]
+        },
+        "txrqliw": {
+          "particle_effects": [{ "effect": "gjjbzui" }],
+          "transitions": [
+            {
+              "rlxiwil": "v.tumfnns && !v.fwkxycb && v.atzsoek > 1 && q.state_time > 0.1"
+            },
+            { "default": "(!v.tumfnns || v.fwkxycb) && q.state_time > 0.1" }
+          ]
+        },
+        "rlxiwil": {
+          "particle_effects": [
+            { "effect": "xjcdmsl" },
+            { "effect": "qphqjxy" },
+            { "effect": "qybbdgh" },
+            { "effect": "hnooxzr" },
+            { "effect": "ckvcwqs" }
+          ],
+          "transitions": [
+            {
+              "txrqliw": "v.tumfnns && !v.fwkxycb && v.atzsoek <= 1 && q.state_time > 0.1"
+            },
+            { "default": "(!v.tumfnns || v.fwkxycb) && q.state_time > 0.1" }
+          ]
+        }
+      }
+    },
+    "controller.animation.oreville_ans.bsytbia.xspnhpi_dxx.mryivfh": {
+      "states": {
+        "default": {
+          "transitions": [{ "qbvgjzd": "v.fwkxycb && q.state_time > 0.1" }]
+        },
+        "qbvgjzd": {
+          "particle_effects": [
+            { "effect": "avfpuew", "pre_effect_script": "v.loklhpa = 0.25;" },
+            { "effect": "kjqekqd", "pre_effect_script": "v.loklhpa = 0.25;" }
+          ],
+          "transitions": [
+            { "txrqliw": "v.fwkxycb && q.state_time > 0.1" },
+            { "default": "!v.fwkxycb && q.state_time > 0.1" }
+          ]
+        },
+        "txrqliw": {
+          "particle_effects": [
+            { "effect": "gjjbzui", "pre_effect_script": "v.loklhpa = 0.25;" }
+          ],
+          "transitions": [
+            { "rlxiwil": "v.fwkxycb && v.atzsoek > 1 && q.state_time > 0.1" },
+            { "default": "!v.fwkxycb && q.state_time > 0.1" }
+          ]
+        },
+        "rlxiwil": {
+          "particle_effects": [
+            { "effect": "xjcdmsl", "pre_effect_script": "v.loklhpa = 0.25;" },
+            { "effect": "qphqjxy", "pre_effect_script": "v.loklhpa = 0.25;" },
+            { "effect": "qybbdgh", "pre_effect_script": "v.loklhpa = 0.25;" },
+            { "effect": "hnooxzr", "pre_effect_script": "v.loklhpa = 0.25;" },
+            { "effect": "ckvcwqs", "pre_effect_script": "v.loklhpa = 0.25;" }
+          ],
+          "transitions": [
+            { "txrqliw": "v.fwkxycb && v.atzsoek <= 1 && q.state_time > 0.1" },
+            { "default": "!v.fwkxycb && q.state_time > 0.1" }
+          ]
+        }
+      }
+    }
+  }
+}

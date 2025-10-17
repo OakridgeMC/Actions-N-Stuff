@@ -1,0 +1,48 @@
+{
+  "format_version": "1.8.0",
+  "render_controllers": {
+    "controller.render.oreville_ans.vmrtgja": {
+      "part_visibility": [
+        { "jymqovo": "q.is_saddled" },
+        { "plosgsw": "q.is_saddled" },
+        { "onrfrqi": "q.is_chested" },
+        { "ymnsfob": "q.is_chested" },
+        { "luqghwo": "q.is_saddled && q.has_rider" }
+      ],
+      "arrays": {
+        "textures": {
+          "Array.textures": [
+            "Texture.xfpacbu",
+            "Texture.hgtphlb",
+            "Texture.ffcjnye",
+            "Texture.vzzqaot",
+            "Texture.qkthuxp",
+            "Texture.lxzfmym"
+          ]
+        }
+      },
+      "geometry": "Geometry.default",
+      "textures": [
+        "Texture.mule",
+        "Texture.markings_none",
+        "Array.textures[v.armor_texture_slot]"
+      ],
+      "on_fire_color": {
+        "r": 1,
+        "g": 0.4,
+        "b": 0,
+        "a": "math.cos(q.life_time * 1200) * -0.35 + 0.35"
+      },
+      "materials": [
+        { "*": "Material.default" },
+        { "jymqovo": "Material.ynfkghe" }
+      ],
+      "color": {
+        "r": "v.armor_texture_slot ? q.armor_color_slot(4, 0) : this",
+        "g": "v.armor_texture_slot ? q.armor_color_slot(4, 1) : this",
+        "b": "v.armor_texture_slot ? q.armor_color_slot(4, 2) : this",
+        "a": "v.armor_texture_slot ? q.armor_color_slot(4, 3) : this"
+      }
+    }
+  }
+}

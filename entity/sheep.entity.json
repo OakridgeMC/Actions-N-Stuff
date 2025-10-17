@@ -1,1 +1,94 @@
-{"format_version":"1.10.0","minecraft:client_entity":{"description":{"identifier":"minecraft:sheep","min_engine_version":"1.8.0","materials":{"default":"entity_change_color_culling","head":"entity_alphatest_change_color_culling"},"textures":{"default":"textures/entity/sheep/0"},"geometry":{"default":"geometry.sheep_anim","sheared":"geometry.sheep_anim_sheared"},"animations":{"look_at_target":"animation.local_space.target","body_rotate":"animation.quadruped.rotation","idle":"animation.quadruped.breathe","idle_0":"animation.cow_idle.anim_0","idle_1":"animation.cow_idle.anim_2","idle_timer":"animation.idle_timer","blink":"animation.step.blink","grazing":"animation.sheep_oh.grazing","jump_timer":"animation.jump_timer","jump":"animation.quadruped.jump","fall":"animation.quadruped.fall","land":"animation.quadruped.land","walk":"animation.quadruped.sheep_walk","run":"animation.quadruped.sheep_run","swim":"animation.quadruped.swim_big","baby_transform":"animation.sheep.baby_transform","target_rotation":"controller.animation.quadruped_rotation","controller_grazing":"controller.animation.sheep_anim.grazing","controller_move":"controller.animation.sheep_anim.movement","controller_fire":"controller.animation.entity.on_fire","controller_idle":"controller.animation.entity.idle","controller_in_air":"controller.animation.in_air","controller_jump":"controller.animation.quadruped_up","controller_fall":"controller.animation.quadruped_dn","controller_land":"controller.animation.quadruped_land"},"scripts":{"animate":["idle","blink","look_at_target","target_rotation","controller_in_air","controller_grazing","controller_move","controller_fire",{"baby_transform":"query.is_baby"}]},"particle_effects":{"dust":"act:dust_medium","fire":"act:on_fire_quadruped","combust":"act:combust_humanoid","impact":"act:water_impact_mid","splash":"act:water_splash_mid","ripples":"act:water_ripples"},"render_controllers":["controller.render.sheep_oh"],"spawn_egg":{"texture":"spawn_egg","texture_index":3}}}}
+{
+  "format_version": "1.21.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "minecraft:sheep",
+      "min_engine_version": "1.8.0",
+      "materials": { "default": "sheep" },
+      "geometry": {
+        "sheared": "geometry.oreville_ans.nkqfent",
+        "default": "geometry.oreville_ans.pjzgtvg",
+        "gwyiana": "geometry.oreville_ans.cfmfjbu",
+        "mnulamf": "geometry.oreville_ans.cfmfjbu"
+      },
+      "animations": {
+        "fvkqler_havtnwz": "animation.oreville_ans.fvkqler.fvkqler_havtnwz",
+        "iphtzkv.mtgxxby_ebkyrqj.ifmasqj": "controller.animation.oreville_ans.bsytbia.mtgxxby_ebkyrqj.ifmasqj",
+        "ejhetkg": "animation.oreville_ans.hqfcbct.ejhetkg_akgslcr",
+        "iphtzkv.xspnhpi_dxx.zxbvhct": "controller.animation.oreville_ans.bsytbia.xspnhpi_dxx.zxbvhct",
+        "iphtzkv.xspnhpi_dxx.ctgeqwl_zmrungh": "controller.animation.oreville_ans.bsytbia.xspnhpi_dxx.ctgeqwl_zmrungh",
+        "iphtzkv.hqfcbct.ejhetkg": "controller.animation.oreville_ans.bsytbia.hqfcbct.ejhetkg",
+        "iphtzkv.hqfcbct.qlobuam": "controller.animation.oreville_ans.bsytbia.hqfcbct.qlobuam",
+        "iphtzkv.hqfcbct.cpjhrkw": "controller.animation.oreville_ans.bsytbia.hqfcbct.cpjhrkw",
+        "iphtzkv.hqfcbct.zijlcyt": "controller.animation.oreville_ans.bsytbia.hqfcbct.zijlcyt",
+        "iphtzkv.gllboax_vrsrjmv.ifmasqj": "controller.animation.oreville_ans.bsytbia.gllboax_vrsrjmv.ifmasqj",
+        "ybdngee.vrsrjmv": "animation.oreville_ans.ybdngee.vrsrjmv",
+        "hqfcbct.swim_akgslcr": "animation.oreville_ans.hqfcbct.swim_akgslcr",
+        "hqfcbct.bdwyfpo": "animation.oreville_ans.hqfcbct.bdwyfpo",
+        "gtlxbpv_omahkzq_gkbnvqq": "animation.oreville_ans.ihelohn.gtlxbpv_omahkzq_gkbnvqq",
+        "zxbvhct": "animation.oreville_ans.ihelohn.zxbvhct",
+        "jrvzxpm": "animation.oreville_ans.ihelohn.jrvzxpm",
+        "rolmmlp": "animation.oreville_ans.ihelohn.rolmmlp",
+        "vcnwlon": "animation.oreville_ans.ihelohn.vcnwlon",
+        "sxgcveo": "animation.oreville_ans.ihelohn.sxgcveo",
+        "zxbvhct_0": "animation.oreville_ans.ihelohn.zxbvhct_0",
+        "zxbvhct_1": "animation.oreville_ans.ihelohn.zxbvhct_1",
+        "baby_transform": "animation.oreville_ans.ihelohn.rkwlfgo_yryexuf",
+        "qlobuam": "animation.oreville_ans.ihelohn.qlobuam",
+        "cpjhrkw": "animation.oreville_ans.ihelohn.cpjhrkw",
+        "zijlcyt": "animation.oreville_ans.ihelohn.zijlcyt",
+        "iphtzkv.ihelohn.ihelohn": "controller.animation.oreville_ans.ihelohn.ihelohn",
+        "iphtzkv.ihelohn.cbsebvj": "controller.animation.oreville_ans.ihelohn.ihelohn.cbsebvj",
+        "iphtzkv.ihelohn.jrvzxpm": "controller.animation.oreville_ans.ihelohn.ihelohn.jrvzxpm"
+      },
+      "scripts": {
+        "pre_animation": [
+          "v.bdyniad = v.vuodqvf || q.is_baby;",
+          "v.actions_and_stuff = 1;",
+          "v.kqnxpvd = math.sin(q.body_y_rotation - v.kajplqu) * 90;"
+        ],
+        "animate": [
+          "iphtzkv.ihelohn.ihelohn",
+          "fvkqler_havtnwz",
+          "iphtzkv.mtgxxby_ebkyrqj.ifmasqj",
+          "hqfcbct.bdwyfpo",
+          "ybdngee.vrsrjmv",
+          "gtlxbpv_omahkzq_gkbnvqq",
+          "iphtzkv.xspnhpi_dxx.ctgeqwl_zmrungh",
+          { "baby_transform": "v.bdyniad" }
+        ],
+        "initialize": [
+          "v.vuodqvf = 0;",
+          "v.bdyniad = v.vuodqvf || q.is_baby;",
+          "v.actions_and_stuff = 1;",
+          "v.kqnxpvd = 0;",
+          "v.kajplqu = 0;",
+          "variable.bdyniad = 0;",
+          "v.rfnoekx = 0;",
+          "v.dpygwmp = 0;",
+          "v.ovqsxoa = 0;",
+          "v.pncgvkl = 0;",
+          "v.gkdougj = 0;",
+          "v.tumfnns = 0;",
+          "v.fwkxycb = 0;",
+          "v.atzsoek = 0;",
+          "v.loklhpa = 0;",
+          "v.gwnkqvc = 0;"
+        ],
+        "scale": "(v.bdyniad && !q.is_baby ? 0.5 : 1) * (1)",
+        "variables": {
+          "variable.actions_and_stuff": "public",
+          "variable.bdyniad": "public"
+        },
+        "should_update_effects_offscreen": "1"
+      },
+      "spawn_egg": { "texture": "spawn_egg_sheep" },
+      "textures": {
+        "default": "textures/entity/sheep/sheep",
+        "gwyiana": "textures/entity/sheep/ihelohn_rkwlfgo",
+        "ihelohn": "textures/entity/sheep/ihelohn"
+      },
+      "render_controllers": ["controller.render.oreville_ans.ihelohn"]
+    }
+  }
+}

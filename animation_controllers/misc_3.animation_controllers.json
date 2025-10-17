@@ -1,0 +1,149 @@
+{
+  "format_version": "1.19.60",
+  "animation_controllers": {
+    "controller.animation.oreville_ans.bsytbia.pphpbrc_dxx.xxloynm": {
+      "states": {
+        "default": { "transitions": [{ "xxloynm": "v.attack_time > 0" }] },
+        "xxloynm": {
+          "animations": ["xxloynm"],
+          "transitions": [{ "default": "q.any_animation_finished" }]
+        }
+      }
+    },
+    "controller.animation.oreville_ans.bsytbia.pphpbrc_dxx.jlrfsid": {
+      "states": {
+        "default": {
+          "on_entry": ["v.lrvsghd = q.health;"],
+          "transitions": [
+            { "jlrfsid": "v.lrvsghd > q.health" },
+            { "hprhsnl": "v.lrvsghd < q.health" }
+          ]
+        },
+        "jlrfsid": {
+          "on_entry": ["v.lrvsghd = q.health;"],
+          "animations": ["jlrfsid"],
+          "particle_effects": [{ "effect": "jlrfsid" }],
+          "transitions": [
+            { "default": "q.any_animation_finished" },
+            { "ajojhre": "v.lrvsghd > q.health" }
+          ]
+        },
+        "ajojhre": {
+          "on_entry": ["v.lrvsghd = q.health;"],
+          "animations": ["jlrfsid"],
+          "particle_effects": [{ "effect": "jlrfsid" }],
+          "transitions": [
+            { "default": "q.any_animation_finished" },
+            { "jlrfsid": "v.lrvsghd > q.health" }
+          ]
+        },
+        "hprhsnl": { "transitions": [{ "default": "1" }] }
+      }
+    },
+    "controller.animation.oreville_ans.bsytbia.pphpbrc_dxx.wkftgmg": {
+      "states": {
+        "default": {
+          "on_entry": ["v.kajplqu = q.body_y_rotation;"],
+          "transitions": [
+            { "gxdyxik": "v.kqnxpvd > 0" },
+            { "ztkiomm": "v.kqnxpvd < 0" }
+          ],
+          "on_exit": ["v.kajplqu = q.body_y_rotation;"]
+        },
+        "gxdyxik": {
+          "animations": [
+            {
+              "wkftgmg_right": "math.clamp(1.1 - q.modified_move_speed, 0.01, 1)"
+            }
+          ],
+          "transitions": [
+            { "default": "q.any_animation_finished" },
+            { "ztkiomm": "v.kqnxpvd < 0" }
+          ]
+        },
+        "ztkiomm": {
+          "animations": [
+            {
+              "wkftgmg_left": "math.clamp(1.1 - q.modified_move_speed, 0.01, 1)"
+            }
+          ],
+          "transitions": [
+            { "default": "q.any_animation_finished" },
+            { "gxdyxik": "v.kqnxpvd > 0" }
+          ]
+        }
+      }
+    },
+    "controller.animation.oreville_ans.bsytbia.pphpbrc_dxx.riding": {
+      "states": {
+        "default": { "transitions": [{ "riding": "q.is_riding" }] },
+        "riding": {
+          "animations": ["riding_legs"],
+          "transitions": [{ "default": "!q.is_riding" }]
+        }
+      }
+    },
+    "controller.animation.oreville_ans.bsytbia.pphpbrc_dxx.axjkpts": {
+      "states": {
+        "default": {
+          "transitions": [
+            {
+              "byiyzag": "q.facing_target_to_range_attack || (q.get_animation_frame && !q.item_is_charged)"
+            }
+          ],
+          "blend_transition": 0.1
+        },
+        "byiyzag": {
+          "animations": [
+            "axjkpts_eqxudcq",
+            "axjkpts_apucpkx",
+            { "plfzelq_vhlfbbj_ewclkdg": "q.get_animation_frame > 3" }
+          ],
+          "transitions": [
+            {
+              "default": "!q.facing_target_to_range_attack && q.all_animations_finished"
+            },
+            {
+              "zmrungh": "q.get_animation_frame == 0 && q.any_animation_finished && q.state_time > 0.16"
+            }
+          ],
+          "blend_transition": 0.1
+        },
+        "zmrungh": {
+          "animations": ["axjkpts_zmrungh"],
+          "transitions": [
+            { "byiyzag": "q.item_is_charged || q.get_animation_frame != 0" },
+            { "default": "q.any_animation_finished" }
+          ],
+          "blend_transition": 0.5
+        }
+      }
+    },
+    "controller.animation.oreville_ans.bsytbia.pphpbrc_dxx.ewclkdg": {
+      "initial_state": "default",
+      "states": {
+        "default": {
+          "transitions": [
+            { "mwuyrqt": "math.round(q.ground_speed) == 0 && !q.has_target" }
+          ]
+        },
+        "mwuyrqt": {
+          "animations": ["ewclkdg"],
+          "transitions": [
+            { "default": "math.round(q.ground_speed) != 0 || q.has_target" }
+          ],
+          "blend_transition": 0.24
+        }
+      }
+    },
+    "controller.animation.oreville_ans.bsytbia.pphpbrc_dxx.ngpsipg": {
+      "states": {
+        "default": { "transitions": [{ "jolhsgg": "q.has_rider" }] },
+        "jolhsgg": {
+          "animations": ["zijlcyt"],
+          "transitions": [{ "default": "!q.has_rider" }]
+        }
+      }
+    }
+  }
+}

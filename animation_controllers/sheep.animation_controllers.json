@@ -1,0 +1,76 @@
+{
+  "format_version": "1.19.60",
+  "animation_controllers": {
+    "controller.animation.oreville_ans.ihelohn.ihelohn": {
+      "states": {
+        "default": {
+          "animations": [
+            "iphtzkv.ihelohn.cbsebvj",
+            "iphtzkv.ihelohn.jrvzxpm",
+            { "iphtzkv.hqfcbct.ejhetkg": "!q.is_in_ui" },
+            "iphtzkv.hqfcbct.qlobuam",
+            "iphtzkv.hqfcbct.cpjhrkw",
+            "iphtzkv.hqfcbct.zijlcyt",
+            { "iphtzkv.gllboax_vrsrjmv.ifmasqj": "q.is_on_ground" }
+          ],
+          "transitions": [{ "riding": "q.is_riding" }]
+        },
+        "riding": {
+          "animations": ["rolmmlp"],
+          "transitions": [{ "default": "!q.is_riding" }]
+        }
+      }
+    },
+    "controller.animation.oreville_ans.ihelohn.ihelohn.cbsebvj": {
+      "initial_state": "vcnwlon",
+      "states": {
+        "vcnwlon": {
+          "animations": [{ "vcnwlon": "q.modified_move_speed" }],
+          "transitions": [
+            { "zpsaddc": "!q.is_on_ground" },
+            { "sxgcveo": "q.modified_move_speed > 0.6" }
+          ],
+          "blend_transition": 0.12
+        },
+        "sxgcveo": {
+          "animations": [{ "sxgcveo": "q.modified_move_speed" }],
+          "transitions": [
+            { "zpsaddc": "!q.is_on_ground" },
+            {
+              "vcnwlon": "q.modified_move_speed < 0.3 && q.any_animation_finished"
+            }
+          ],
+          "blend_transition": 0.18
+        },
+        "nmmpsqz": {
+          "animations": ["hqfcbct.swim_akgslcr"],
+          "transitions": [{ "vcnwlon": "!q.is_in_water && q.is_on_ground" }],
+          "blend_transition": 0.24
+        },
+        "zpsaddc": {
+          "transitions": [
+            { "sxgcveo": "q.is_on_ground && q.modified_move_speed > 0.6" },
+            { "vcnwlon": "q.is_on_ground" },
+            { "nmmpsqz": "q.is_in_water" }
+          ],
+          "blend_transition": 0.2
+        }
+      }
+    },
+    "controller.animation.oreville_ans.ihelohn.ihelohn.jrvzxpm": {
+      "states": {
+        "default": {
+          "animations": ["iphtzkv.xspnhpi_dxx.zxbvhct"],
+          "transitions": [{ "jrvzxpm": "q.is_grazing == 1" }],
+          "blend_transition": 0.06
+        },
+        "jrvzxpm": {
+          "animations": ["jrvzxpm"],
+          "transitions": [
+            { "default": "q.is_grazing == 0 && q.all_animations_finished" }
+          ]
+        }
+      }
+    }
+  }
+}

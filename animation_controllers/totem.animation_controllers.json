@@ -1,1 +1,0 @@
-{"format_version":"1.19.0","animation_controllers":{"controller.animation.totem.hurt":{"states":{"default":{"on_entry":["v.health=q.health;"],"transitions":[{"hurt":"v.health>q.health"},{"heal":"v.health<q.health"}]},"hurt":{"animations":["flash"],"on_exit":["v.hurt=0;"],"transitions":[{"default":"q.all_animations_finished"}]},"heal":{"transitions":[{"default":"1"}]}}}}}

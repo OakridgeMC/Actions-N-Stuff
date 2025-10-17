@@ -1,0 +1,78 @@
+{
+  "format_version": "1.19.60",
+  "animation_controllers": {
+    "controller.animation.oreville_ans.ppsjcov.ppsjcov": {
+      "states": {
+        "default": {
+          "animations": [
+            "iphtzkv.xspnhpi_dxx.zxbvhct_aifisui",
+            "iphtzkv.hqfcbct.qlobuam",
+            "iphtzkv.hqfcbct.cpjhrkw",
+            "iphtzkv.hqfcbct.zijlcyt",
+            "iphtzkv.pphpbrc_dxx.ngpsipg",
+            { "iphtzkv.hqfcbct.ejhetkg": "!q.is_in_ui" },
+            { "iphtzkv.ppsjcov.move": "!q.has_rider" },
+            { "iphtzkv.gllboax_vrsrjmv.ifmasqj": "q.is_on_ground" }
+          ],
+          "transitions": [{ "riding": "q.is_riding" }]
+        },
+        "riding": {
+          "animations": [{ "rolmmlp": "!q.has_rider" }],
+          "transitions": [{ "default": "!q.is_riding" }]
+        }
+      }
+    },
+    "controller.animation.oreville_ans.ppsjcov.ppsjcov.move": {
+      "initial_state": "vcnwlon",
+      "states": {
+        "vcnwlon": {
+          "animations": [{ "vcnwlon": "q.modified_move_speed" }],
+          "transitions": [
+            { "sxgcveo": "q.ground_speed > 3.8" },
+            { "swim": "q.is_in_water" }
+          ],
+          "blend_transition": 0.12
+        },
+        "sxgcveo": {
+          "animations": [{ "sxgcveo": "q.modified_move_speed" }],
+          "transitions": [
+            { "vcnwlon": "q.ground_speed < 3.1 && q.any_animation_finished" },
+            { "swim": "q.is_in_water" }
+          ],
+          "blend_transition": 0.12
+        },
+        "swim": {
+          "animations": ["hqfcbct.swim_cfooaen"],
+          "transitions": [{ "vcnwlon": "!q.is_in_water && q.is_on_ground" }],
+          "blend_transition": 0.24
+        }
+      }
+    },
+    "controller.animation.oreville_ans.ppsjcov.ppsjcov.move_ngpsipg": {
+      "states": {
+        "default": {
+          "animations": [{ "zxbvhct": "q.is_riding ? 0.5 : 1" }],
+          "transitions": [{ "move": "q.has_rider" }]
+        },
+        "move": {
+          "on_entry": [
+            "v.xbxcjgv = q.position(0);",
+            "v.dngrbik = q.position(2);"
+          ],
+          "animations": [
+            "zijlcyt",
+            "zxbvhct",
+            { "vcnwlon": "math.max(0.001,v.jzqnqao)" },
+            { "sxgcveo": "math.max(0.001,v.zadvzkp*1.3)" }
+          ],
+          "transitions": [
+            {
+              "move": "v.xbxcjgv = math.lerp(v.xbxcjgv, q.position(0), q.delta_time / 0.2);v.dngrbik = math.lerp(v.dngrbik, q.position(2), q.delta_time / 0.2);v.kgtxvcp = math.abs(q.position(0) - v.xbxcjgv) + math.abs(q.position(2) - v.dngrbik);v.jzqnqao = math.lerp(v.jzqnqao, v.kgtxvcp < 1 ? math.min(v.kgtxvcp * 3, 1), 0.2);v.zadvzkp = math.lerp(v.zadvzkp, v.kgtxvcp >= 1 ? math.min(v.kgtxvcp, 1), 0.2);return 0;"
+            },
+            { "default": "!q.has_rider" }
+          ]
+        }
+      }
+    }
+  }
+}

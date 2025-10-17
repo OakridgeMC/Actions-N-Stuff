@@ -1,1 +1,154 @@
-{"format_version":"1.10.0","minecraft:client_entity":{"description":{"identifier":"minecraft:chicken","min_engine_version":"1.12.0","materials":{"default":"entity"},"textures":{"default":"textures/entity/chimkin"},"geometry":{"default":"geometry.chicken_anim"},"animations":{"blink":"animation.step.blink_eye","idle":"animation.chicken_anim.idle","idle_0":"animation.chicken_anim.idle_0","idle_1":"animation.chicken_anim.idle_1","idle_2":"animation.chicken_anim.idle_2","idle_timer":"animation.idle_timer_short","move":"animation.chicken_anim.walk","run":"animation.chicken_anim.run","float":"animation.chicken_anim.float","plane":"animation.chicken_anim.plane","jump_timer":"animation.jump_timer","jump":"animation.chicken_anim.jump","fall":"animation.chicken_anim.fall","land":"animation.chicken_anim.land","vert_cap":"animation.chicken_anim.vertical_block","look_at_target":"animation.common.look_at_target","baby_transform":"animation.chicken.baby_transform","controller_always_on":"controller.animation.chimkin.always_on","controller_plane":"controller.animation.chimkin.plane","controller_fire":"controller.animation.entity.on_fire","controller_move":"controller.animation.chimkin.move","controller_idle":"controller.animation.chimkin.idle","controller_in_air":"controller.animation.in_air","controller_jump":"controller.animation.jump","controller_fall":"controller.animation.chimkin.flap","controller_land":"controller.animation.land"},"scripts":{"animate":["controller_always_on","controller_fire","controller_move","controller_idle","controller_in_air",{"baby_transform":"query.is_baby"}]},"particle_effects":{"fire":"act:on_fire_tiny","combust":"act:combust_tiny"},"render_controllers":["controller.render.entity_oh"],"spawn_egg":{"texture":"spawn_egg","texture_index":0}}}}
+{
+  "format_version": "1.21.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "minecraft:chicken",
+      "min_engine_version": "1.12.0",
+      "materials": {
+        "default": "entity_alphatest",
+        "mbspbvr.kqxjqkd": "mbspbvr.kqxjqkd",
+        "arueojm.kqxjqkd": "arueojm.kqxjqkd",
+        "vvwpvxv": "vvwpvxv"
+      },
+      "animations": {
+        "fvkqler_havtnwz": "animation.oreville_ans.fvkqler.fvkqler_havtnwz",
+        "iphtzkv.mtgxxby_ebkyrqj.ifmasqj": "controller.animation.oreville_ans.bsytbia.mtgxxby_ebkyrqj.ifmasqj",
+        "baby_transform": "animation.chicken.baby_transform",
+        "iphtzkv.pphpbrc_dxx.wkftgmg": "controller.animation.oreville_ans.bsytbia.pphpbrc_dxx.wkftgmg",
+        "iphtzkv.xspnhpi_dxx.ctgeqwl_zmrungh": "controller.animation.oreville_ans.bsytbia.xspnhpi_dxx.ctgeqwl_zmrungh",
+        "iphtzkv.xspnhpi_dxx.qlobuam": "controller.animation.oreville_ans.bsytbia.xspnhpi_dxx.qlobuam",
+        "iphtzkv.xspnhpi_dxx.zijlcyt": "controller.animation.oreville_ans.bsytbia.xspnhpi_dxx.zijlcyt",
+        "iphtzkv.gllboax_vrsrjmv.vlcjied_yzidrpy_mbqfekr": "controller.animation.oreville_ans.bsytbia.gllboax_vrsrjmv.vlcjied_yzidrpy_mbqfekr",
+        "gkbnvqq.evobfph_uiizimt": "animation.oreville_ans.gkbnvqq.evobfph_uiizimt",
+        "ybdngee.vrsrjmv_utidvpw": "animation.oreville_ans.ybdngee.vrsrjmv_utidvpw",
+        "rkwlfgo_ioyfgpu": "animation.oreville_ans.baqkjbk.rkwlfgo_ioyfgpu",
+        "zxbvhct": "animation.oreville_ans.baqkjbk.zxbvhct",
+        "nmmpsqz": "animation.oreville_ans.baqkjbk.nmmpsqz",
+        "vcnwlon": "animation.oreville_ans.baqkjbk.vcnwlon",
+        "sxgcveo": "animation.oreville_ans.baqkjbk.sxgcveo",
+        "qlobuam": "animation.oreville_ans.baqkjbk.qlobuam",
+        "cpjhrkw": "animation.oreville_ans.baqkjbk.cpjhrkw",
+        "zijlcyt": "animation.oreville_ans.baqkjbk.zijlcyt",
+        "zxbvhct_0": "animation.oreville_ans.baqkjbk.zxbvhct_0",
+        "zxbvhct_1": "animation.oreville_ans.baqkjbk.zxbvhct_1",
+        "zxbvhct_2": "animation.oreville_ans.baqkjbk.zxbvhct_2",
+        "necbtsa": "animation.oreville_ans.baqkjbk.necbtsa",
+        "wkftgmg_right": "animation.oreville_ans.baqkjbk.wkftgmg_right",
+        "wkftgmg_left": "animation.oreville_ans.baqkjbk.wkftgmg_left",
+        "baqkjbk_lwufctp": "animation.oreville_ans.baqkjbk.baqkjbk_lwufctp",
+        "fsdyhky": "animation.oreville_ans.baqkjbk.fsdyhky",
+        "iphtzkv.baqkjbk.move": "controller.animation.oreville_ans.baqkjbk.baqkjbk.move",
+        "iphtzkv.baqkjbk.cpjhrkw": "controller.animation.oreville_ans.baqkjbk.baqkjbk.cpjhrkw",
+        "iphtzkv.baqkjbk.necbtsa": "controller.animation.oreville_ans.baqkjbk.baqkjbk.necbtsa",
+        "iphtzkv.baqkjbk.jlrfsid": "controller.animation.oreville_ans.baqkjbk.baqkjbk.jlrfsid",
+        "iphtzkv.baqkjbk.zxbvhct": "controller.animation.oreville_ans.baqkjbk.baqkjbk.zxbvhct",
+        "iphtzkv.baqkjbk.name_dnvpfxn": "controller.animation.oreville_ans.baqkjbk.baqkjbk.name_dnvpfxn"
+      },
+      "scripts": {
+        "initialize": [
+          "v.vuodqvf = 0;",
+          "v.bdyniad = v.vuodqvf || q.is_baby;",
+          "v.actions_and_stuff = 1;",
+          "v.sippkmq = q.has_property('minecraft:climate_variant') ? (q.property('minecraft:climate_variant') == 'cold' ? 2 :q.property('minecraft:climate_variant') == 'warm' ? 1 :0) :0;",
+          "v.kqnxpvd = 0;",
+          "v.kajplqu = 0;",
+          "v.bqrrftk = 0;",
+          "v.hbwkagp = 0;",
+          "v.sstfqmu = 0;",
+          "variable.bdyniad = 0;",
+          "v.rfnoekx = 0;",
+          "v.bzqxjti = 0;",
+          "v.htaogjf = 0;",
+          "v.cotkuwn = 0;",
+          "v.ncrlqem = 0;",
+          "v.jkhauky = 0;",
+          "v.geukoxs = 0;",
+          "v.jruwquu = 0;",
+          "v.nuweknj = 0;",
+          "v.dpygwmp = 0;",
+          "v.lrvsghd = 0;",
+          "v.ovqsxoa = 0;",
+          "v.pncgvkl = 0;",
+          "v.gkdougj = 0;",
+          "v.tumfnns = 0;",
+          "v.fwkxycb = 0;",
+          "v.atzsoek = 0;",
+          "v.loklhpa = 0;",
+          "v.gwnkqvc = 0;",
+          "v.caugnpk = 0;",
+          "v.zqftywd = 0;",
+          "v.kprwjsh = 0;",
+          "v.ptmxpwg = 0;"
+        ],
+        "pre_animation": [
+          "v.bdyniad = v.vuodqvf || q.is_baby;",
+          "v.actions_and_stuff = 1;",
+          "v.kqnxpvd = math.sin(q.body_y_rotation - v.kajplqu) * 90;",
+          "v.bqrrftk = v.hbwkagp;v.hbwkagp = 0;",
+          "v.sippkmq = q.has_property('minecraft:climate_variant') ? (q.property('minecraft:climate_variant') == 'cold' ? 2 :q.property('minecraft:climate_variant') == 'warm' ? 1 :0) :0;",
+          "v.sstfqmu = math.lerp(v.sstfqmu, q.is_on_ground, 0.2);"
+        ],
+        "animate": [
+          "iphtzkv.baqkjbk.move",
+          "iphtzkv.baqkjbk.cpjhrkw",
+          "iphtzkv.baqkjbk.necbtsa",
+          "iphtzkv.baqkjbk.jlrfsid",
+          "iphtzkv.baqkjbk.zxbvhct",
+          "iphtzkv.baqkjbk.name_dnvpfxn",
+          "fvkqler_havtnwz",
+          "iphtzkv.mtgxxby_ebkyrqj.ifmasqj",
+          "gkbnvqq.evobfph_uiizimt",
+          "ybdngee.vrsrjmv_utidvpw",
+          "zxbvhct",
+          "iphtzkv.xspnhpi_dxx.ctgeqwl_zmrungh",
+          "iphtzkv.pphpbrc_dxx.wkftgmg",
+          "iphtzkv.xspnhpi_dxx.qlobuam",
+          "iphtzkv.xspnhpi_dxx.zijlcyt",
+          { "baby_transform": "v.bdyniad" },
+          {
+            "iphtzkv.gllboax_vrsrjmv.vlcjied_yzidrpy_mbqfekr": "q.is_on_ground"
+          }
+        ],
+        "scale": "(v.bdyniad && !q.is_baby ? 0.5 : 1) * (1)",
+        "variables": {
+          "variable.actions_and_stuff": "public",
+          "variable.bdyniad": "public"
+        },
+        "should_update_effects_offscreen": "1"
+      },
+      "spawn_egg": { "texture": "spawn_egg_chicken" },
+      "render_controllers": [
+        "controller.render.oreville_ans.baqkjbk.ifmasqj",
+        "controller.render.oreville_ans.uhnkxdt",
+        { "controller.render.oreville_ans.baqkjbk.lwufctp": "0" },
+        { "controller.render.oreville_ans.baqkjbk.kqxjqkd": "0" }
+      ],
+      "textures": {
+        "default": "textures/entity/chicken",
+        "gpvjvqd": "textures/entity/chicken/chicken_warm",
+        "lxqmuju": "textures/entity/chicken/chicken_cold",
+        "deofubh": "textures/entity/zombie/zombie",
+        "nbndzjn": "textures/entity/chicken/baqkjbk_rkwlfgo_pdhzzih",
+        "vimfcox": "textures/entity/chicken/baqkjbk_rkwlfgo_yvvepza",
+        "qmjhgwg": "textures/entity/chicken/baqkjbk_rkwlfgo",
+        "bzzwhns": "textures/entity/chicken/baqkjbk_pvtvunt",
+        "zsisqib": "textures/entity/chicken/baqkjbk_fsdyhky",
+        "ysnguaa": "textures/entity/chicken/baqkjbk_kkbvsvd",
+        "baqkjbk": "textures/entity/chicken/baqkjbk"
+      },
+      "geometry": {
+        "default": "geometry.oreville_ans.umwwnot",
+        "nbndzjn": "geometry.oreville_ans.mlejnwk",
+        "qmjhgwg": "geometry.oreville_ans.xwziudk",
+        "lxqmuju": "geometry.oreville_ans.swbcuud",
+        "bzzwhns": "geometry.oreville_ans.ozjnkxp",
+        "tpjklus": "geometry.oreville_ans.hpqnqws",
+        "prktpra": "geometry.oreville_ans.bprskmm",
+        "ixqccej": "geometry.oreville_ans.rwpzkfr",
+        "qaixobr": "geometry.oreville_ans.xbciotc",
+        "ysnguaa": "geometry.oreville_ans.qfhdzna",
+        "btzmiys": "geometry.oreville_ans.eabgqse"
+      }
+    }
+  }
+}

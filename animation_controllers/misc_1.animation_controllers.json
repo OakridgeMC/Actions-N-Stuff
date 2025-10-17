@@ -1,0 +1,145 @@
+{
+  "format_version": "1.19.60",
+  "animation_controllers": {
+    "controller.animation.oreville_ans.bsytbia.gllboax_vrsrjmv.ifmasqj": {
+      "states": {
+        "default": { "transitions": [{ "vrsrjmv": "v.rfnoekx" }] },
+        "vrsrjmv": {
+          "on_entry": ["v.rfnoekx = 0;"],
+          "transitions": [
+            { "uwmuzcu": "!q.is_sitting && q.distance_from_camera <= 16" },
+            { "ckabqsl": "q.is_sitting && q.distance_from_camera <= 8" }
+          ]
+        },
+        "uwmuzcu": {
+          "sound_effects": [{ "effect": "vrsrjmv" }],
+          "transitions": [{ "default": "1" }]
+        },
+        "ckabqsl": {
+          "sound_effects": [{ "effect": "dihcfer" }],
+          "transitions": [{ "default": "1" }]
+        }
+      }
+    },
+    "controller.animation.oreville_ans.bsytbia.gllboax_vrsrjmv.pioigju": {
+      "states": {
+        "default": {
+          "transitions": [
+            {
+              "bhgipky": "v.is_first_person && q.is_local_player && v.rfnoekx == 1"
+            },
+            {
+              "dfyqvya": "v.is_first_person && q.is_local_player && v.rfnoekx == 2"
+            },
+            { "hsnmjwd": "v.rfnoekx == 1" },
+            { "bcrnhhp": "v.rfnoekx == 2" }
+          ]
+        },
+        "bhgipky": {
+          "on_entry": ["v.rfnoekx = 0;"],
+          "sound_effects": [{ "effect": "xhqusix" }],
+          "transitions": [{ "default": "1" }]
+        },
+        "dfyqvya": {
+          "on_entry": ["v.rfnoekx = 0;"],
+          "sound_effects": [{ "effect": "trxgaqu" }],
+          "transitions": [{ "default": "1" }]
+        },
+        "hsnmjwd": {
+          "on_entry": ["v.rfnoekx = 0;"],
+          "sound_effects": [{ "effect": "fmyauun" }],
+          "transitions": [{ "default": "1" }]
+        },
+        "bcrnhhp": {
+          "on_entry": ["v.rfnoekx = 0;"],
+          "sound_effects": [{ "effect": "qfiuuoj" }],
+          "transitions": [{ "default": "1" }]
+        }
+      }
+    },
+    "controller.animation.oreville_ans.bsytbia.gllboax_vrsrjmv.jchmzlh": {
+      "states": {
+        "default": {
+          "transitions": [
+            { "rgaqiss": "v.rfnoekx == 1 && q.distance_from_camera <= 16" },
+            { "wpilpix": "v.rfnoekx == 2 && q.distance_from_camera <= 16" }
+          ]
+        },
+        "rgaqiss": {
+          "particle_effects": [{ "effect": "rgaqiss" }],
+          "sound_effects": [{ "effect": "vrsrjmv" }],
+          "transitions": [
+            { "wpilpix": "v.rfnoekx == 2 && q.distance_from_camera <= 16" }
+          ]
+        },
+        "wpilpix": {
+          "particle_effects": [{ "effect": "wpilpix" }],
+          "sound_effects": [{ "effect": "vrsrjmv" }],
+          "transitions": [
+            { "rgaqiss": "v.rfnoekx == 1 && q.distance_from_camera <= 16" }
+          ]
+        }
+      }
+    },
+    "controller.animation.oreville_ans.bsytbia.gllboax_vrsrjmv.vlcjied_yzidrpy_mbqfekr": {
+      "states": {
+        "default": {
+          "transitions": [
+            { "rgaqiss": "v.rfnoekx == 1 && q.distance_from_camera <= 16" },
+            { "wpilpix": "v.rfnoekx == 2 && q.distance_from_camera <= 16" }
+          ]
+        },
+        "rgaqiss": {
+          "sound_effects": [{ "effect": "vrsrjmv" }],
+          "transitions": [
+            { "wpilpix": "v.rfnoekx == 2 && q.distance_from_camera <= 16" }
+          ]
+        },
+        "wpilpix": {
+          "sound_effects": [{ "effect": "vrsrjmv" }],
+          "transitions": [
+            { "rgaqiss": "v.rfnoekx == 1 && q.distance_from_camera <= 16" }
+          ]
+        }
+      }
+    },
+    "controller.animation.oreville_ans.bsytbia.gllboax_vrsrjmv.kkbvsvd": {
+      "states": {
+        "default": {
+          "transitions": [
+            { "rgaqiss": "v.rfnoekx == 1 && q.distance_from_camera <= 16" },
+            {
+              "wpilpix": "v.rfnoekx == 2 && q.distance_from_camera <= 16 && q.distance_from_camera <= 16"
+            }
+          ]
+        },
+        "rgaqiss": {
+          "sound_effects": [{ "effect": "wbrwhaa" }],
+          "transitions": [
+            { "wpilpix": "v.rfnoekx == 2 && q.distance_from_camera <= 16" }
+          ]
+        },
+        "wpilpix": {
+          "sound_effects": [{ "effect": "wbrwhaa" }],
+          "transitions": [
+            { "rgaqiss": "v.rfnoekx == 1 && q.distance_from_camera <= 16" }
+          ]
+        }
+      }
+    },
+    "controller.animation.oreville_ans.bsytbia.gllboax_vrsrjmv.zxbvhct": {
+      "states": {
+        "default": {
+          "transitions": [
+            { "zxbvhct": "v.gwnkqvc && q.distance_from_camera <= 16" }
+          ]
+        },
+        "zxbvhct": {
+          "on_entry": ["v.gwnkqvc = 0;"],
+          "sound_effects": [{ "effect": "zxbvhct" }],
+          "transitions": [{ "default": "1" }]
+        }
+      }
+    }
+  }
+}

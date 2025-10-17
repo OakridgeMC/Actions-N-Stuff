@@ -1,1 +1,0 @@
-{"format_version":"1.10.0","animation_controllers":{"controller.animation.blaze.anim":{"states":{"default":{"particle_effects":[{"effect":"glow","locator":"core"}],"animations":["move","blink","look_at_target"],"transitions":[{"dead":"!q.is_alive"}]},"dead":{"particle_effects":[{"effect":"death","locator":"core"}],"animations":["death_rot","death_anim"]}}}}}

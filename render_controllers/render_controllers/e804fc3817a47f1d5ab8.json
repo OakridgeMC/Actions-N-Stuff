@@ -1,0 +1,1 @@
+{"format_version":"1.10.0","render_controllers":{"controller.render.oreville_ans.ogfhfyq":{"geometry":"v.bdyniad ? Geometry.effjlqk : Geometry.default","textures":["v.bdyniad ? Texture.effjlqk : Texture.default"],"on_fire_color":{"r":1,"g":0.4,"b":0,"a":"math.cos(q.life_time * 1200) * -0.35 + 0.35"},"materials":[{"*":"Material.default"},{"blink":"Material.xlvwauz"}]}}}

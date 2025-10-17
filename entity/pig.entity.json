@@ -1,1 +1,121 @@
-{"format_version":"1.10.0","minecraft:client_entity":{"description":{"identifier":"minecraft:pig","min_engine_version":"1.8.0","materials":{"default":"entity","cull":"entity_alphatest_culling","saddle":"entity_alphatest"},"textures":{"default":"textures/entity/pig/0"},"geometry":{"default":"geometry.pig_anim"},"animations":{"look_at_target":"animation.local_space.target","body_rotate":"animation.quadruped.rotation_small","bob":"animation.quadruped.bob","idle_0":"animation.pig_idle.anim_0","idle_1":"animation.pig_idle.anim_1","idle_2":"animation.pig_idle.anim_2","idle_timer":"animation.idle_timer","blink":"animation.step.blink","baby_transform":"animation.pig.baby_transform","swim":"animation.quadruped.swim_small","walk":"animation.quadruped.pig_walk","run":"animation.quadruped.goat_run","jump_timer":"animation.jump_timer","jump":"animation.quadruped.jump","fall":"animation.quadruped.fall","land":"animation.quadruped.land","controller_rotation":"controller.animation.quadruped_rotation","controller_ridden":"controller.animation.entity.ridden","controller_in_air":"controller.animation.in_air","controller_jump":"controller.animation.quadruped_up","controller_fall":"controller.animation.quadruped_dn","controller_land":"controller.animation.quadruped_land","controller_move":"controller.animation.pig_movement","controller_idle":"controller.animation.entity.idle_peaceful","controller_fire":"controller.animation.entity.on_fire"},"scripts":{"animate":["controller_move","controller_idle","controller_fire","controller_in_air","controller_ridden","controller_rotation","look_at_target","bob","blink",{"baby_transform":"query.is_baby"}]},"particle_effects":{"dust":"act:dust_medium","fire":"act:on_fire_small","combust":"act:combust_tiny","impact":"act:water_impact_mid","splash":"act:water_splash_mid","ripples":"act:water_ripples"},"sound_effects":{"snort":"mob.pig.say"},"render_controllers":["controller.render.pig_anim"],"spawn_egg":{"texture":"spawn_egg","texture_index":2}}}}
+{
+  "format_version": "1.21.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "minecraft:pig",
+      "min_engine_version": "1.8.0",
+      "materials": {
+        "default": "entity_alphatest",
+        "jymqovo": "entity_alphatest"
+      },
+      "animations": {
+        "fvkqler_havtnwz": "animation.oreville_ans.fvkqler.fvkqler_havtnwz",
+        "iphtzkv.mtgxxby_ebkyrqj.ifmasqj": "controller.animation.oreville_ans.bsytbia.mtgxxby_ebkyrqj.ifmasqj",
+        "ejhetkg": "animation.oreville_ans.hqfcbct.ejhetkg",
+        "baby_transform": "animation.pig.baby_transform",
+        "qlobuam": "animation.oreville_ans.hqfcbct.qlobuam",
+        "cpjhrkw": "animation.oreville_ans.hqfcbct.cpjhrkw",
+        "zijlcyt": "animation.oreville_ans.ppsjcov.zijlcyt",
+        "iphtzkv.pphpbrc_dxx.ngpsipg": "controller.animation.oreville_ans.bsytbia.pphpbrc_dxx.ngpsipg",
+        "iphtzkv.xspnhpi_dxx.zxbvhct_aifisui": "controller.animation.oreville_ans.bsytbia.xspnhpi_dxx.zxbvhct_aifisui",
+        "iphtzkv.xspnhpi_dxx.ctgeqwl_zmrungh": "controller.animation.oreville_ans.bsytbia.xspnhpi_dxx.ctgeqwl_zmrungh",
+        "iphtzkv.hqfcbct.qlobuam": "controller.animation.oreville_ans.bsytbia.hqfcbct.qlobuam",
+        "iphtzkv.hqfcbct.cpjhrkw": "controller.animation.oreville_ans.bsytbia.hqfcbct.cpjhrkw",
+        "iphtzkv.hqfcbct.zijlcyt": "controller.animation.oreville_ans.bsytbia.hqfcbct.zijlcyt",
+        "iphtzkv.hqfcbct.ejhetkg": "controller.animation.oreville_ans.bsytbia.hqfcbct.ejhetkg",
+        "iphtzkv.gllboax_vrsrjmv.ifmasqj": "controller.animation.oreville_ans.bsytbia.gllboax_vrsrjmv.ifmasqj",
+        "hqfcbct.swim_cfooaen": "animation.oreville_ans.hqfcbct.swim_cfooaen",
+        "gkbnvqq.evobfph_uiizimt": "animation.oreville_ans.gkbnvqq.evobfph_uiizimt",
+        "vcnwlon": "animation.oreville_ans.ppsjcov.vcnwlon",
+        "sxgcveo": "animation.oreville_ans.ppsjcov.sxgcveo",
+        "zxbvhct_0": "animation.oreville_ans.ppsjcov.zxbvhct_0",
+        "zxbvhct_1": "animation.oreville_ans.ppsjcov.zxbvhct_1",
+        "zxbvhct_2": "animation.oreville_ans.ppsjcov.zxbvhct_2",
+        "rolmmlp": "animation.oreville_ans.ppsjcov.rolmmlp",
+        "zxbvhct": "animation.oreville_ans.ppsjcov.zxbvhct",
+        "iphtzkv.ppsjcov.ppsjcov": "controller.animation.oreville_ans.ppsjcov.ppsjcov",
+        "iphtzkv.ppsjcov.move": "controller.animation.oreville_ans.ppsjcov.ppsjcov.move",
+        "iphtzkv.ppsjcov.move_ngpsipg": "controller.animation.oreville_ans.ppsjcov.ppsjcov.move_ngpsipg"
+      },
+      "scripts": {
+        "initialize": [
+          "v.vuodqvf = 0;",
+          "v.bdyniad = v.vuodqvf || q.is_baby;",
+          "v.actions_and_stuff = 1;",
+          "v.kigepwb = q.has_property('minecraft:climate_variant');v.sippkmq = v.kigepwb ? (q.property('minecraft:climate_variant') == 'cold' ? 2: q.property('minecraft:climate_variant') == 'warm'? 1 ): 0;",
+          "v.kigepwb = q.has_property('minecraft:climate_variant');v.sippkmq = v.kigepwb ? (q.property('minecraft:climate_variant') == 'cold' ? 2: q.property('minecraft:climate_variant') == 'warm'? 1 ): 0;",
+          "v.kqnxpvd = 0;",
+          "v.kajplqu = 0;",
+          "variable.bdyniad = 0;",
+          "v.rfnoekx = 0;",
+          "v.gwnkqvc = 0;",
+          "v.ucpnqnf = 0;",
+          "v.xomeqbf = 0;",
+          "v.dpygwmp = 0;",
+          "v.lrvsghd = 0;",
+          "v.ovqsxoa = 0;",
+          "v.pncgvkl = 0;",
+          "v.gkdougj = 0;",
+          "v.tumfnns = 0;",
+          "v.fwkxycb = 0;",
+          "v.atzsoek = 0;",
+          "v.loklhpa = 0;",
+          "v.caugnpk = 0;",
+          "v.zqftywd = 0;",
+          "v.xbxcjgv = 0;",
+          "v.dngrbik = 0;",
+          "v.jzqnqao = 0;",
+          "v.zadvzkp = 0;",
+          "v.kgtxvcp = 0;"
+        ],
+        "pre_animation": [
+          "v.bdyniad = v.vuodqvf || q.is_baby;",
+          "v.actions_and_stuff = 1;",
+          "v.kqnxpvd = math.sin(q.body_y_rotation - v.kajplqu) * 90;",
+          "v.sippkmq = q.property('minecraft:climate_variant') == 'cold' ? 2 : q.property('minecraft:climate_variant') == 'warm' ? 1;"
+        ],
+        "animate": [
+          "iphtzkv.ppsjcov.ppsjcov",
+          "iphtzkv.ppsjcov.move_ngpsipg",
+          "fvkqler_havtnwz",
+          "iphtzkv.mtgxxby_ebkyrqj.ifmasqj",
+          "iphtzkv.xspnhpi_dxx.ctgeqwl_zmrungh",
+          "gkbnvqq.evobfph_uiizimt",
+          { "baby_transform": "v.bdyniad" }
+        ],
+        "scale": "(v.bdyniad && !q.is_baby ? 0.5 : 1) * (1)",
+        "variables": {
+          "variable.actions_and_stuff": "public",
+          "variable.bdyniad": "public"
+        },
+        "should_update_effects_offscreen": "1"
+      },
+      "spawn_egg": { "texture": "spawn_egg_pig" },
+      "render_controllers": [
+        {
+          "controller.render.oreville_ans.ohuffsh": "v.kigepwb && q.is_saddled"
+        },
+        "controller.render.oreville_ans.ppsjcov"
+      ],
+      "textures": {
+        "default": "textures/entity/pig/pig_v3",
+        "hzkpaki": "textures/entity/pig/pig",
+        "nshtmru": "textures/entity/pig/pig_saddle",
+        "trwftae": "textures/entity/pig/pig_warm",
+        "xosqbgy": "textures/entity/pig/pig_cold",
+        "yweuqnb": "textures/entity/pig/ppsjcov_rkwlfgo_pdhzzih",
+        "ocpunzs": "textures/entity/pig/ppsjcov_rkwlfgo_xatfgyg",
+        "wrgwnst": "textures/entity/pig/ppsjcov_rkwlfgo_yvvepza",
+        "csvtsxs": "textures/entity/pig/ppsjcov_rkwlfgo",
+        "jvfhlyq": "textures/entity/pig/ppsjcov_xatfgyg",
+        "ohuffsh": "textures/entity/pig/ppsjcov_jymqovo",
+        "ppsjcov": "textures/entity/pig/ppsjcov"
+      },
+      "geometry": {
+        "default": "geometry.oreville_ans.nitzhbw",
+        "csvtsxs": "geometry.oreville_ans.mpanufv",
+        "pqtlnns": "geometry.oreville_ans.qbjhnsf"
+      }
+    }
+  }
+}

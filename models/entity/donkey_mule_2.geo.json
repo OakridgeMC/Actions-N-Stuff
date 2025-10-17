@@ -1,0 +1,163 @@
+{
+  "format_version": "1.12.0",
+  "minecraft:geometry": [
+    {
+      "description": {
+        "identifier": "geometry.oreville_ans.olycjpc",
+        "texture_width": 96,
+        "texture_height": 96,
+        "visible_bounds_width": 3,
+        "visible_bounds_height": 3.5,
+        "visible_bounds_offset": [0, 1.25, 0]
+      },
+      "bones": [
+        { "name": "root", "pivot": [0, 0, 0] },
+        { "name": "body", "parent": "root", "pivot": [0, 16, 0] },
+        {
+          "name": "gytfukh",
+          "parent": "body",
+          "pivot": [0, 17, -8],
+          "rotation": [30, 0, 0],
+          "cubes": [
+            { "origin": [-4, 15, -12], "size": [8, 12, 8], "uv": [0, 34] },
+            { "origin": [-2, 15, -3.95], "size": [4, 12, 4], "uv": [68, 12] }
+          ],
+          "locators": { "lead": [0, 17, -8] }
+        },
+        {
+          "name": "head",
+          "parent": "gytfukh",
+          "pivot": [0, 28, -8],
+          "cubes": [
+            { "origin": [-3, 27, -18], "size": [6, 8, 6], "uv": [64, 34] },
+            { "origin": [-2, 27, -4], "size": [4, 8, 4], "uv": [0, 70] },
+            { "origin": [-4, 27, -12], "size": [8, 8, 8], "uv": [32, 34] }
+          ]
+        },
+        {
+          "name": "hgdndmf",
+          "parent": "head",
+          "pivot": [-1.75, 33, -4.75],
+          "rotation": [0, 0, -15],
+          "cubes": [
+            { "origin": [-4.75, 31, -6.25], "size": [4, 10, 2], "uv": [64, 66] }
+          ]
+        },
+        {
+          "name": "jkeadxu",
+          "parent": "head",
+          "pivot": [1.75, 33, -4.5],
+          "rotation": [0, 0, 15],
+          "cubes": [
+            { "origin": [0.75, 31, -6.25], "size": [4, 10, 2], "uv": [68, 0] }
+          ]
+        },
+        {
+          "name": "luqghwo",
+          "parent": "head",
+          "pivot": [0, 30.5, -13.5],
+          "rotation": [-35, 0, 0]
+        },
+        { "name": "plosgsw", "parent": "head", "pivot": [0, 17, -8] },
+        {
+          "name": "xscxjyu",
+          "parent": "body",
+          "pivot": [0, 16, 0],
+          "cubes": [
+            {
+              "origin": [-6, 11, -11],
+              "size": [12, 12, 22],
+              "inflate": 0.02,
+              "uv": [0, 0]
+            }
+          ]
+        },
+        { "name": "jymqovo", "parent": "xscxjyu", "pivot": [0, 16, 0] },
+        {
+          "name": "ymnsfob",
+          "parent": "xscxjyu",
+          "pivot": [-5, 21, 11],
+          "rotation": [0, -90, 0]
+        },
+        {
+          "name": "onrfrqi",
+          "parent": "xscxjyu",
+          "pivot": [5, 21, 11],
+          "rotation": [0, 90, 0]
+        },
+        {
+          "name": "hjwhrxn",
+          "parent": "body",
+          "pivot": [0.5, 20, 11],
+          "cubes": [
+            { "origin": [-2, 6, 9], "size": [4, 14, 4], "uv": [48, 66] }
+          ]
+        },
+        { "name": "root_leg0", "parent": "root", "pivot": [0, 0, 0] },
+        {
+          "name": "oyxfcfz0_kyyxxyl",
+          "parent": "root_leg0",
+          "pivot": [-3, 0, 9]
+        },
+        {
+          "name": "jfpagfb",
+          "parent": "oyxfcfz0_kyyxxyl",
+          "pivot": [-3, 11, 9],
+          "cubes": [
+            {
+              "origin": [-7, 0, 5],
+              "size": [6, 12, 6],
+              "uv": [24, 66],
+              "mirror": true
+            }
+          ]
+        },
+        { "name": "root_leg1", "parent": "root", "pivot": [0, 0, 0] },
+        {
+          "name": "oyxfcfz1_kyyxxyl",
+          "parent": "root_leg1",
+          "pivot": [3, 0, 9]
+        },
+        {
+          "name": "czqlgve",
+          "parent": "oyxfcfz1_kyyxxyl",
+          "pivot": [3, 11, 9],
+          "cubes": [{ "origin": [1, 0, 5], "size": [6, 12, 6], "uv": [24, 66] }]
+        },
+        { "name": "root_leg2", "parent": "root", "pivot": [0, 0, 0] },
+        {
+          "name": "oyxfcfz2_kyyxxyl",
+          "parent": "root_leg2",
+          "pivot": [-3, 0, -9]
+        },
+        {
+          "name": "gvbcexs",
+          "parent": "oyxfcfz2_kyyxxyl",
+          "pivot": [-3, 11, -9],
+          "cubes": [
+            {
+              "origin": [-7, 0, -11],
+              "size": [6, 12, 6],
+              "uv": [24, 66],
+              "mirror": true
+            }
+          ]
+        },
+        { "name": "root_leg3", "parent": "root", "pivot": [0, 0, 0] },
+        {
+          "name": "oyxfcfz3_kyyxxyl",
+          "parent": "root_leg3",
+          "pivot": [3, 0, -9]
+        },
+        {
+          "name": "tnvojwr",
+          "parent": "oyxfcfz3_kyyxxyl",
+          "pivot": [3, 11, -9],
+          "cubes": [
+            { "origin": [1, 0, -11], "size": [6, 12, 6], "uv": [24, 66] }
+          ]
+        }
+      ]
+    }
+  ]
+}

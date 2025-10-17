@@ -1,1 +1,381 @@
-{"format_version":"1.10.0","animation_controllers":{"controller.animation.cat_oh.base":{"initial_state":"default","states":{"default":{"animations":["look_at_target","bob","blink"],"transitions":[{"sneak":"q.is_sneaking"},{"rest":"v.liedownamount!=0"},{"sit":"q.is_sitting"}]},"sneak":{"animations":["look_at_target","bob","sneak"],"blend_transition":0.26,"transitions":[{"default":"!q.is_sneaking&&q.all_animations_finished"}]},"sit":{"animations":["look_at_target","bob","blink","sit"],"transitions":[{"rest":"q.all_animations_finished&&v.liedownamount!=0"},{"stand_up":"q.all_animations_finished&&!q.is_sitting"}]},"stand_up":{"animations":["look_at_target","bob","stand"],"transitions":[{"default":"q.all_animations_finished"}]},"rest":{"particle_effects":[{"effect":"sleeping"}],"animations":["lie_down"],"transitions":[{"wake_up":"v.liedownamount!=1&&q.any_animation_finished"}]},"wake_up":{"animations":["bob","wake_up"],"transitions":[{"default":"q.all_animations_finished"}]}}},"controller.animation.ocelot_oh.sneak":{"initial_state":"default","states":{"default":{"animations":["look_at_target","bob","blink"],"transitions":[{"sneak":"q.is_sneaking"}]},"sneak":{"animations":["look_at_target","bob","sneak"],"blend_transition":0.26,"transitions":[{"default":"!q.is_sneaking&&q.all_animations_finished"}]}}},"controller.animation.cat_oh.tail":{"initial_state":"default","states":{"default":{"animations":["tail_unsure"],"blend_transition":0.3,"transitions":[{"focused":"q.is_sneaking"},{"sitting":"q.is_sitting"},{"tense":"q.modified_move_speed>0.9||q.vertical_speed!=0.0"}]},"sitting":{"animations":["tail_unsure"],"blend_transition":0.8,"transitions":[{"default":"!q.is_sitting"}]},"focused":{"animations":["tail_focused"],"blend_transition":0.4,"transitions":[{"sitting":"q.is_sitting"},{"tense":"!q.is_sneaking&&q.ground_speed==0"}]},"tense":{"animations":["tail_frightened","tense_timer","target_rotation"],"blend_transition":0.6,"transitions":[{"focused":"q.is_sneaking"},{"sitting":"q.is_sitting"},{"default":"query.all_animations_finished"}]}}},"controller.animation.cat_oh.move":{"initial_state":"walking","states":{"walking":{"animations":[{"walk":"query.modified_move_speed"}],"blend_transition":0.2,"transitions":[{"floating":"q.is_in_water"},{"sneaking":"q.is_sneaking"},{"sprinting":"q.is_sprinting||query.modified_move_speed>0.95"},{"staying_still":"q.is_sitting||q.is_sleeping"}]},"sneaking":{"animations":[{"creep":"query.modified_move_speed"}],"blend_transition":0.2,"transitions":[{"floating":"q.is_in_water"},{"sprinting":"q.is_sprinting||(!q.is_sneaking&&query.modified_move_speed>0.9)"},{"staying_still":"q.is_sitting||q.is_sleeping"},{"walking":"!q.is_sneaking&&q.any_animation_finished"}]},"sprinting":{"animations":[{"sprint":"query.modified_move_speed"}],"blend_transition":0.2,"transitions":[{"floating":"q.is_in_water"},{"sneaking":"q.is_sneaking"},{"walking":"!q.has_target&&q.modified_move_speed<0.86&&q.any_animation_finished==1"},{"staying_still":"q.is_sitting||q.is_sleeping"}]},"staying_still":{"blend_transition":0.2,"transitions":[{"floating":"q.is_in_water"},{"sprinting":"q.is_sprinting"},{"walking":"!q.is_sitting&&!q.is_sleeping"}]},"floating":{"animations":["float"],"blend_transition":0.2,"transitions":[{"walking":"!q.is_in_water&&q.is_on_ground"}]}}}}}
+{
+  "format_version": "1.19.60",
+  "animation_controllers": {
+    "controller.animation.oreville_ans.ttpzihs.ttpzihs.vhlfbbj": {
+      "states": {
+        "default": {
+          "on_entry": ["v.eatdouw = math.random_integer(0, 1);"],
+          "transitions": [
+            { "jczgdau": "q.is_sneaking" },
+            { "dpxwbfw": "v.liedownamount != 0" },
+            { "rolmmlp": "v.eatdouw && q.is_sitting || q.is_riding" },
+            { "grmlpxp": "!v.eatdouw && q.is_sitting || q.is_riding" }
+          ]
+        },
+        "jczgdau": {
+          "animations": ["jczgdau"],
+          "transitions": [
+            { "default": "!q.is_sneaking && q.any_animation_finished" }
+          ],
+          "blend_transition": 0.26
+        },
+        "rolmmlp": {
+          "animations": ["rolmmlp"],
+          "transitions": [
+            { "dpxwbfw": "v.liedownamount != 0" },
+            {
+              "svgptzb": "q.any_animation_finished && !q.is_sitting && !q.is_riding"
+            }
+          ]
+        },
+        "svgptzb": {
+          "animations": ["hhjrlam_bghnmsg"],
+          "transitions": [{ "default": "q.any_animation_finished" }]
+        },
+        "grmlpxp": {
+          "on_entry": [
+            "v.pncgvkl = math.random(0, 6.33);",
+            "v.mchijmw = q.body_y_rotation;"
+          ],
+          "animations": [
+            "bkwkksi_rolmmlp",
+            "bkwkksi_ejhetkg",
+            {
+              "bkwkksi_dhyaxuw": "math.hermite_blend(1 - math.clamp(q.state_time / 0.7, 0, 1))"
+            }
+          ],
+          "transitions": [{ "mgqomdu": "q.state_time > 0.9583" }],
+          "blend_transition": 0.24
+        },
+        "mgqomdu": {
+          "on_entry": ["v.pncgvkl = math.random(0, 6.33);"],
+          "animations": [
+            "bkwkksi_ckabqsl",
+            "bkwkksi_ejhetkg",
+            "bkwkksi_dhyaxuw"
+          ],
+          "transitions": [
+            { "htbczbc": "q.state_time > v.pncgvkl" },
+            { "nbwcywx": "!q.is_sitting && !q.is_riding" }
+          ]
+        },
+        "htbczbc": {
+          "on_entry": [
+            "v.gkdougj = math.random_integer(0, 3);",
+            "v.jmemomv = v.gkdougj == 2 ? 1 : 0;"
+          ],
+          "animations": [
+            "bkwkksi_ejhetkg",
+            "bkwkksi_dhyaxuw",
+            { "bkwkksi_zxbvhct_0": "v.gkdougj == 0" },
+            { "bkwkksi_zxbvhct_1": "v.gkdougj == 1" },
+            { "bkwkksi_zxbvhct_2": "v.gkdougj == 2" },
+            { "bkwkksi_ckabqsl": "v.gkdougj == 3" }
+          ],
+          "transitions": [
+            { "mgqomdu": "q.state_time > 5.0833" },
+            { "pnruilf": "v.gkdougj == 3 && q.is_sitting || q.is_riding" },
+            { "nbwcywx": "!q.is_sitting && !q.is_riding" }
+          ],
+          "blend_transition": 0.24,
+          "on_exit": ["v.jmemomv = 1;"]
+        },
+        "pnruilf": {
+          "on_entry": ["v.jmemomv = 1;"],
+          "animations": [
+            "bkwkksi_qsoshkp_nprpxgs",
+            "bkwkksi_ejhetkg",
+            "bkwkksi_dhyaxuw"
+          ],
+          "transitions": [
+            { "gemlptb": "q.state_time > 7.2917" },
+            { "nbwcywx": "!q.is_sitting && !q.is_riding" }
+          ]
+        },
+        "gemlptb": {
+          "on_entry": ["v.dunrtui = math.random(30, 60);"],
+          "animations": [
+            "bkwkksi_qsoshkp_zxbvhct",
+            "bkwkksi_ejhetkg",
+            "bkwkksi_dhyaxuw"
+          ],
+          "particle_effects": [{ "effect": "zgbihkh" }],
+          "transitions": [
+            { "cuflagv": "q.state_time > v.dunrtui" },
+            { "nbwcywx": "!q.is_sitting && !q.is_riding" }
+          ]
+        },
+        "cuflagv": {
+          "animations": [
+            "bkwkksi_qsoshkp_fofftzt",
+            "bkwkksi_ejhetkg",
+            "bkwkksi_dhyaxuw"
+          ],
+          "transitions": [
+            { "mgqomdu": "q.state_time > 0.375" },
+            { "nbwcywx": "!q.is_sitting && !q.is_riding" }
+          ],
+          "on_exit": ["v.jmemomv = 0;"]
+        },
+        "nbwcywx": {
+          "on_entry": ["v.wfvggtd = 1;", "v.jmemomv = 0;"],
+          "animations": [
+            "bkwkksi_hhjrlam",
+            { "bkwkksi_ejhetkg": "1 - math.clamp(q.state_time / 0.5, 0, 1)" },
+            {
+              "bkwkksi_dhyaxuw": "math.hermite_blend(math.clamp(q.state_time / 0.7, 0, 1))"
+            }
+          ],
+          "transitions": [{ "default": "q.state_time > 1.0417" }],
+          "blend_transition": 0.24
+        },
+        "dpxwbfw": {
+          "on_entry": ["v.wfvggtd = 0;"],
+          "animations": ["gotrtxc_tsailnj"],
+          "particle_effects": [{ "effect": "zgbihkh" }],
+          "transitions": [
+            { "qovpqoc": "v.liedownamount != 1 && q.any_animation_finished" }
+          ]
+        },
+        "qovpqoc": {
+          "animations": ["uyoazhn_bghnmsg"],
+          "transitions": [{ "default": "q.any_animation_finished" }],
+          "on_exit": ["v.wfvggtd = 1;"]
+        }
+      }
+    },
+    "controller.animation.oreville_ans.ttpzihs.ttpzihs.gkbnvqq": {
+      "states": {
+        "default": {
+          "animations": ["gtlxbpv_omahkzq_gkbnvqq"],
+          "transitions": [{ "zxbvhct": "!v.wfvggtd && q.state_time > 0.24" }],
+          "blend_transition": 0.24
+        },
+        "zxbvhct": {
+          "transitions": [{ "default": "v.wfvggtd && q.state_time > 0.24" }],
+          "blend_transition": 0.24
+        }
+      }
+    },
+    "controller.animation.oreville_ans.ttpzihs.ttpzihs.rolmmlp": {
+      "states": {
+        "default": {
+          "animations": [
+            { "iphtzkv.hqfcbct.ejhetkg": "!q.is_in_ui && !v.bsguyyj" },
+            { "iphtzkv.ttpzihs.move": "!v.bdyniad && !v.bsguyyj" },
+            { "iphtzkv.ttpzihs.move_rkwlfgo": "v.bdyniad && !v.bsguyyj" },
+            { "iphtzkv.hqfcbct.qlobuam": "!v.bsguyyj" },
+            { "iphtzkv.hqfcbct.cpjhrkw": "!v.bsguyyj" }
+          ],
+          "transitions": [{ "riding": "q.is_riding || q.is_sitting" }],
+          "blend_transition": 0.2
+        },
+        "riding": {
+          "transitions": [{ "default": "!q.is_riding && !q.is_sitting" }],
+          "blend_transition": 0.2
+        }
+      }
+    },
+    "controller.animation.oreville_ans.ttpzihs.ttpzihs.zxbvhct": {
+      "states": {
+        "default": { "transitions": [{ "xfbsluy": "q.state_time > 0.24" }] },
+        "xfbsluy": {
+          "on_entry": ["v.pncgvkl = math.random(0, 6.33);"],
+          "transitions": [
+            { "zxbvhct": "q.state_time > v.pncgvkl" },
+            { "default": "q.ground_speed" }
+          ]
+        },
+        "zxbvhct": {
+          "on_entry": [
+            "v.etzzqbt = q.is_sitting || q.is_riding;",
+            "v.gkdougj = math.random_integer(0, 3) + (v.etzzqbt ? 2);",
+            "v.jmemomv = v.gkdougj == 3 ? 1 : 0;"
+          ],
+          "animations": [
+            { "zxbvhct_0": "v.gkdougj == 0" },
+            { "zxbvhct_1": "v.gkdougj == 1" },
+            { "zxbvhct_2": "v.gkdougj == 2" },
+            { "zxbvhct_3": "v.gkdougj == 3" },
+            { "zxbvhct_4": "v.gkdougj == 4" },
+            { "zxbvhct_5": "v.gkdougj == 5" }
+          ],
+          "transitions": [
+            {
+              "default": "q.any_animation_finished || q.ground_speed > 0.3 || v.etzzqbt != (q.is_sitting || q.is_riding)"
+            }
+          ],
+          "blend_transition": 0.24,
+          "on_exit": ["v.wfvggtd = 1;"]
+        }
+      }
+    },
+    "controller.animation.oreville_ans.ttpzihs.ttpzihs.hjwhrxn": {
+      "initial_state": "default",
+      "states": {
+        "default": {
+          "animations": ["jdgzfzq"],
+          "transitions": [
+            { "ibuvfoh": "q.is_sneaking" },
+            { "ckabqsl": "q.is_sitting" },
+            {
+              "dlslznw": "q.modified_move_speed > 0.9 || q.vertical_speed != 0"
+            }
+          ],
+          "blend_transition": 0.3
+        },
+        "ckabqsl": {
+          "animations": ["jdgzfzq"],
+          "transitions": [{ "default": "!q.is_sitting" }],
+          "blend_transition": 0.8
+        },
+        "ibuvfoh": {
+          "animations": ["ibuvfoh"],
+          "transitions": [
+            { "ckabqsl": "q.is_sitting" },
+            { "dlslznw": "!q.is_sneaking && q.ground_speed == 0" }
+          ],
+          "blend_transition": 0.4
+        },
+        "dlslznw": {
+          "animations": ["rrgsjaf", "dlslznw"],
+          "transitions": [
+            { "ibuvfoh": "q.is_sneaking" },
+            { "ckabqsl": "q.is_sitting" },
+            { "default": "q.all_animations_finished" }
+          ],
+          "blend_transition": 0.6
+        }
+      }
+    },
+    "controller.animation.oreville_ans.ttpzihs.ttpzihs.move": {
+      "initial_state": "ncsdklc",
+      "states": {
+        "ncsdklc": {
+          "animations": [{ "vcnwlon": "q.modified_move_speed" }],
+          "transitions": [
+            { "evrdhbb": "q.is_in_water" },
+            { "oixrayz": "q.is_sneaking" },
+            { "fzaeypb": "q.is_sprinting || q.modified_move_speed > 0.95" },
+            { "ctmuize": "q.is_sitting || q.is_sleeping" }
+          ],
+          "blend_transition": 0.2
+        },
+        "oixrayz": {
+          "animations": [{ "xufhioq": "q.modified_move_speed" }],
+          "transitions": [
+            { "evrdhbb": "q.is_in_water" },
+            {
+              "fzaeypb": "q.is_sprinting || (!q.is_sneaking && q.modified_move_speed > 0.9)"
+            },
+            { "ctmuize": "q.is_sitting || q.is_sleeping" },
+            { "ncsdklc": "!q.is_sneaking && q.any_animation_finished" }
+          ],
+          "blend_transition": 0.2
+        },
+        "fzaeypb": {
+          "animations": [{ "hvjqxog": "q.modified_move_speed" }],
+          "transitions": [
+            { "evrdhbb": "q.is_in_water" },
+            { "oixrayz": "q.is_sneaking" },
+            {
+              "ncsdklc": "!q.has_target && q.modified_move_speed < 0.86 && q.any_animation_finished == 1"
+            },
+            { "ctmuize": "q.is_sitting || q.is_sleeping" }
+          ],
+          "blend_transition": 0.2
+        },
+        "ctmuize": {
+          "transitions": [
+            { "evrdhbb": "q.is_in_water" },
+            { "fzaeypb": "q.is_sprinting" },
+            { "ncsdklc": "!q.is_sitting && !q.is_sleeping" }
+          ],
+          "blend_transition": 0.2
+        },
+        "evrdhbb": {
+          "animations": ["nmmpsqz"],
+          "transitions": [{ "ncsdklc": "!q.is_in_water && q.is_on_ground" }],
+          "blend_transition": 0.2
+        }
+      }
+    },
+    "controller.animation.oreville_ans.ttpzihs.ttpzihs.move_rkwlfgo": {
+      "initial_state": "ncsdklc",
+      "states": {
+        "ncsdklc": {
+          "animations": [{ "vcnwlon_rkwlfgo": "q.modified_move_speed" }],
+          "transitions": [
+            { "evrdhbb": "q.is_in_water" },
+            { "oixrayz": "q.is_sneaking && !q.is_sprinting" },
+            { "ctmuize": "q.is_sitting || q.is_sleeping" }
+          ],
+          "blend_transition": 0.2
+        },
+        "oixrayz": {
+          "animations": [{ "vcnwlon": "q.modified_move_speed" }],
+          "transitions": [
+            { "evrdhbb": "q.is_in_water" },
+            { "ctmuize": "q.is_sitting || q.is_sleeping" },
+            {
+              "ncsdklc": "q.is_sprinting || !q.is_sneaking && q.any_animation_finished"
+            }
+          ],
+          "blend_transition": 0.2
+        },
+        "ctmuize": {
+          "transitions": [
+            { "evrdhbb": "q.is_in_water" },
+            { "ncsdklc": "!q.is_sitting && !q.is_sleeping" }
+          ],
+          "blend_transition": 0.2
+        },
+        "evrdhbb": {
+          "animations": ["nmmpsqz"],
+          "transitions": [{ "ncsdklc": "!q.is_in_water && q.is_on_ground" }],
+          "blend_transition": 0.2
+        }
+      }
+    },
+    "controller.animation.oreville_ans.ttpzihs.ttpzihs.riding": {
+      "states": {
+        "default": { "transitions": [{ "hqpslyc": "q.is_riding" }] },
+        "hqpslyc": {
+          "on_entry": [
+            "v.xbxcjgv = q.position(0);",
+            "v.dngrbik = q.position(2);"
+          ],
+          "transitions": [
+            {
+              "lbwyhin": "q.is_riding_any_entity_of_type('minecraft:minecart')"
+            },
+            { "buaiuqp": "1" }
+          ]
+        },
+        "buaiuqp": {
+          "transitions": [
+            {
+              "lbwyhin": "q.is_riding_any_entity_of_type('minecraft:minecart')"
+            },
+            { "default": "!q.is_riding" }
+          ]
+        },
+        "lbwyhin": {
+          "animations": [
+            "vslwwno.riding_iaiyvlf_kadhbmz_ejhetkg",
+            { "lbwyhin_move": "math.clamp(v.rtkodiy,0.001,1)" }
+          ],
+          "transitions": [
+            {
+              "lbwyhin": "v.egdbzqe = math.clamp(q.ground_speed - math.abs(q.vertical_speed), 0, 1);v.rtkodiy = math.lerp(v.rtkodiy, v.egdbzqe, 0.1);return 0;"
+            },
+            { "default": "!q.is_riding" },
+            {
+              "buaiuqp": "!q.is_riding_any_entity_of_type('minecraft:minecart')"
+            }
+          ]
+        }
+      }
+    }
+  }
+}
