@@ -2,17 +2,17 @@
     "format_version": 2,
     "header": {
         "description":"Animations Pack by AvgZing using Oreville Studios' original works, with heavy trimming for use on the Oakridge: Survival Unhinged personal realm and for other personal use. Included mobs: cat, chicken, cow, donkey, fox, horse, mule, pig, sheep, wolf.",
-        "name": "AvgZing-Oakridge Animations Pack §8(2.0.0)",
-        "uuid": "06cf3dc1-cf4b-4af6-9fc8-83d7b708a9ed",
-        "version": [2, 0, 0],
+        "name": "AvgZing-Oakridge Animations Pack §8(2.0.1)",
+        "uuid": "921f2baf-80ca-4369-bec3-7f73a4971e5c",
+        "version": [2, 0, 1],
         "min_engine_version": [ 1, 21, 50 ]
     },
     "modules": [
         {
             "description": "ACT",
             "type": "resources",
-            "uuid": "d8fe3690-aac0-4227-aee6-daf2dc7c2deb",
-            "version": [2, 0, 0]
+            "uuid": "585d566a-201b-412a-9c03-a616c872cbae",
+            "version": [2, 0, 1]
         }
     ]
 }
